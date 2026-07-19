@@ -44,12 +44,12 @@ moves; the plan does. Each task must execute without re-reading the plan.
 ## Re-plan — closes every batch boundary
 
 1. **Fold** what the batch taught: consolidate, split, re-order; detail
-   the batch entering the 2-batch horizon; commit (note re-orderings).
+   the batch entering the horizon; commit (note consequential re-orderings).
 2. **Gap check**: every unticked C-id in exactly one remaining batch —
    none left → suggest "→ finish"; every gap a plan change, never silent.
 3. **Extract** into PLAN.md `## State`: decisions and why, failed
-   approaches, open questions, attempt tallies — only what disk and
-   git can't re-derive.
+   approaches, open questions, in-flight attempt tallies — only what
+   disk and git can't re-derive.
 4. **Boundary report — the only exit.** Fixed shape, every boundary:
    what landed (evidence) · what moved and why · propose compaction
    (the extract is durable; fresh re-entry via the fresh-session row)
@@ -59,8 +59,8 @@ moves; the plan does. Each task must execute without re-reading the plan.
 ## Intake — mid-flight, no boundary
 
 Seat spec deltas or structural learnings; re-slice if tasks changed
-meaning; tell the human what moved. No State, no compaction, no ticks
-— standalone gap check: coverage + gap fixes only. Then "→ implement".
+meaning; tell the human what moved. No State, no compaction, no ticks —
+gap check included (coverage + fixes only). "→ implement" at the adjusted task.
 
 ## Never
 

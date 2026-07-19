@@ -65,10 +65,12 @@ Runs in ~/Developer/craftsman-pilot (empty, confirmed).
       ($7.07, 407 turns, per-phase table), what held, two friction
       findings → batch 17b. Done: C13 ticked.
 
-## Batch 17b — pilot findings (proposed, human validates)
-- [x] 17b.1 Constitution budget gate. Done: check.sh pins template ≤100
-      (red→green proven at 104); craftsman-mode Never commits an
-      oversize AGENTS.md, `wc -l` named. (a3d15a8)
+## Batch 17b — pilot findings (approved 2026-07-19)
+- [x] 17b.1 Constitution budget gate. Done: check.sh pins template ≤100;
+      craftsman-mode Never commits an oversize AGENTS.md, `wc -l` named.
+      Red→green evidence (rerun post-review): `FAIL: …AGENTS.template.md
+      is 104 lines…` exit=1 → restored → `check: all green` exit=0.
+      (a3d15a8)
 - [x] 17b.2 plan Initial mode validation stop. Done: step 5 "Present
       the plan — wait for the go", announce moved behind the yes.
 - [x] 17b.3 boundary go skip-resistant. Done: Re-plan step 4 is now
