@@ -83,18 +83,18 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       gate + validator green.
 
 ## Batch 6 — implement best-in-class
-- [ ] 6.1 Rework implement SKILL.md: task loop (ground with Rules/Conventions
+- [x] 6.1 Rework implement SKILL.md: task loop (ground with Rules/Conventions
       re-read + deprecation check → red with watch-it-fail + stale-plan
       detection → green minimal → root-cause-not-patches → refactor →
       QA-extend → commit → "→ verify"); zero tolerance rules (implementation
       gap, guideline drift, architecture hacks); discovery routes (spec
       contradiction → specify, architecture blocks → plan, found bug →
       Gaps); commit discipline (feat + separate refactor commits, [C-id]).
-- [ ] 6.2 references/testing.md: emergent-tests doctrine from v1 (what
+- [x] 6.2 references/testing.md: emergent-tests doctrine from v1 (what
       earns/never earns a test, right-level rule vs criteria, integration at
       real boundaries, property patterns, mutation-minded quality rules) +
       superpowers mock anti-patterns distilled.
-- [ ] 6.3 references/clean-code.md: refactoring-is-not-a-crime (rule of
+- [x] 6.3 references/clean-code.md: refactoring-is-not-a-crime (rule of
       three, dead code deleted on sight, no overdesign), dirty-patch
       bad→good table, refactor-commit boundaries; ADR note on commit
       discipline; gate + validator green.
