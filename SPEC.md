@@ -50,8 +50,8 @@ human validation. Verify ticks the boxes.
       projects, init exports Xcode's skills and records that they own
       platform idiom over generic guidance.
 
-## Pilot — evidence layer (unimplemented)
-- [ ] C13. A greenfield "build a todo app" auto-routes through the flow
+## Pilot — evidence layer
+- [x] C13. A greenfield "build a todo app" auto-routes through the flow
       end to end — no skill named manually — with per-phase token
       overhead measured and reported.
 

@@ -4,11 +4,10 @@ Adapts at every batch boundary. The spec never moves: SPEC.md C1–C18
 (approved 2026-07-19), replacing the founding-brief proxy.
 
 ## State
-- In flight: 17.2 pilot running — PI harness + MiniMax M3 (human
-  decision: stress-test skills on a non-Claude harness and a weaker
-  model; feeds the deferred commit-hook question). Session log with
-  per-message usage: ~/.pi/agent/sessions/--Users-bertrand-Developer-
-  craftsman-pilot--/2026-07-19T16-54-*.jsonl.
+- In flight: nothing — batch 17 done, C13 ticked. Next: batch 17b
+  (pilot findings) on human go, then 18–19 (release).
+- Pilot outcome: shipped 16/16 on PI + GLM 5.2, $7.07, zero process
+  steering — full report: docs/pilot-2026-07-19.md.
 - Standing decisions: pilot (C13) runs before public release so README
   claims cite measured numbers (human-approved); commit-hook backstop
   deferred until pilot evidence (ADR 2026-07-19).
@@ -57,10 +56,24 @@ Runs in ~/Developer/craftsman-pilot (empty, confirmed).
       AGENTS.md or ledgers (C16 edge by construction). Idempotent by
       re-copy; an existing real `.claude/skills` dir → copy into it,
       never symlink over. Verify = diff -r; validator optional (uvx).
-- [ ] 17.2 Run the flow end to end — auto-routing only, no skill named
-      manually; record per-phase token overhead as it runs.
-- [ ] 17.3 Pilot report: measurements, friction → proposed improvement
-      batch; numbers feed the README (C15). Done: C13 ticked.
+- [x] 17.2 Run the flow end to end — auto-routing only. Done: human-run
+      on PI + MiniMax M3→GLM 5.2; shipped 16/16 criteria, 44 commits,
+      5 reviewed batches; gates re-verified independently (53/53 tests,
+      lint, typecheck, build green); zero process steering in 12 human
+      messages; per-message usage captured in PI session log.
+- [x] 17.3 Pilot report: docs/pilot-2026-07-19.md — measurements
+      ($7.07, 407 turns, per-phase table), what held, two friction
+      findings → batch 17b. Done: C13 ticked.
+
+## Batch 17b — pilot findings (proposed, human validates)
+- [ ] 17b.1 Constitution budget gate: craftsman-mode init verifies
+      AGENTS.md ≤100 lines before committing it (pilot wrote 161,
+      blowing C10's always-on bound); check.sh pins the template ≤100
+      as rendered constitution (closes the open Gap below).
+- [ ] 17b.2 fix skill: ledger the defect (PLAN State) as step one,
+      before diagnosis — pilot lost an open defect to a stream drop
+      ("Continue" resumed the wrong thread); C9 doctrine applied to
+      mid-session interruption.
 
 ## Batch 18 — release foundation
 - [ ] 18.1 LICENSE: MIT at root, matching skill frontmatter (C14).
