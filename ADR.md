@@ -2,6 +2,19 @@
 
 Read before re-litigating anything. Newest first.
 
+## 2026-07-19 — Two-tier composable rules
+Context: fundamental rules (idiomatic-modern, DRY, YAGNI, clean comments)
+needed a home that guarantees they always bind without bloating every skill.
+Decision: two complementary locations that compose. Perpetual rules live in
+AGENTS.md Rules (read every turn, never compacted): a universal seed plus
+stack-specific perpetual rules that craftsman-mode derives from official docs
+at init and re-validates on refresh. Activity-specific rules live only in the
+skill whose phase they bind (test-first in implement, evidence language in
+verify). A rule appears in exactly one tier.
+Rejected: all rules in skills (perpetual rules would vanish whenever no skill
+is active); all rules in AGENTS.md (burns the 100-line budget on phase detail
+that only matters when the phase runs).
+
 ## 2026-07-19 — Verify per task, review per batch
 Context: cadence of quality checks had to balance speed against drift.
 Decision: verify (gates + evidence) closes every task; a systematic fresh-eyes
