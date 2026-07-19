@@ -23,18 +23,28 @@ core goals — quality, speed, token efficiency (README).
       scripts/check.sh to cross-check Flow-table skill names against
       skills/ directories. Done: `scripts/check.sh` green, batch review pass.
 
-## Batch 2 (draft) — skill alignment
-- craftsman-mode: seed Rules at init — universal four verbatim, then 2–4
-  stack-specific perpetual rules derived from official docs (one line each);
-  refresh path re-validates stack rules against current docs.
-- Audit each skill: keep only activity-specific rules; strip anything the
-  perpetual tier already covers (composition, not duplication).
-- Align each SKILL.md description with the Flow-table state language.
-- Decide the defect route (fix skill or Flow row — see Gaps).
+## Batch 2 — craftsman-mode best-in-class
+Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
+- [ ] 2.1 Gate first: check.sh validates name matches directory and
+      description contains "Use when" anywhere in frontmatter (open-spec
+      folded descriptions). Done: green on current skills, red on violation.
+- [ ] 2.2 Rework craftsman-mode: open-spec frontmatter (folded description
+      with triggers + non-triggers, license, compatibility), route table
+      (greenfield / brownfield / refresh, no default), brainstorm-on-ambiguity
+      handoff, stack-agnostic gate discovery (web, apps, data, CLI), rules
+      seeding, red→green loop proof. references/greenfield.md +
+      brownfield.md. Sources: skill-shaper, Craftsman v1 init, superpowers
+      SDO. Done: gate green; open-spec validator passes if available.
+- [ ] 2.3 Record the description-format decision (triggers and boundaries,
+      never process) in ADR.md; update the AGENTS.md convention example.
 
-## Batch 3 (draft) — validation
-- Greenfield pilot: "build a todo app" must auto-route to brainstorm;
-  walk one full cycle; measure real token overhead per phase.
+## Later batches (draft)
+- One batch per remaining skill: brainstorm, specify, plan, implement,
+  verify, review, finish — same treatment; strip rules the perpetual tier
+  covers; align descriptions to Flow-table states.
+- Decide the defect route (fix skill or Flow row — see Gaps).
+- Greenfield pilot: "build a todo app" must auto-route through the flow;
+  measure real token overhead per phase.
 
 ## Gaps
 - No route for defects: the flow only moves forward; a bug found mid-flight
