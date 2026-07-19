@@ -30,10 +30,10 @@ moves; the plan does. Each task must execute without re-reading the plan.
 ## Initial
 
 1. **Ground.** Official docs first for every capability — current
-   idiomatic patterns, not memory. Check ADR.md dead ends before
-   proposing an approach; a match is cited to the human before retry.
-   Sketch: goal, 2–3-sentence approach, file map (one responsibility
-   per file). Consequential choices → ADR.md, rejected alternative in.
+   idiom, not memory. Check ADR.md dead ends before proposing an
+   approach; a match is cited to the human before retry. Sketch: goal,
+   2–3-sentence approach, file map (one responsibility per file).
+   Consequential choices → ADR.md with the rejected alternative.
 2. **Slice** into batches of 2–4 tasks; batch 1 is the walking skeleton.
    Order by dependency, then learning value — most architecture-teaching
    first.
@@ -59,8 +59,8 @@ moves; the plan does. Each task must execute without re-reading the plan.
 
 Seat spec deltas or structural learnings into current and remaining
 batches; re-slice if tasks changed meaning; tell the human what moved.
-No State, no compaction, no ticks. Then "→ implement" at the adjusted
-task. Standalone gap check: coverage + gap fixes only.
+No State, no compaction, no ticks — standalone gap check included:
+coverage + gap fixes only. Then "→ implement" at the adjusted task.
 
 ## Never
 

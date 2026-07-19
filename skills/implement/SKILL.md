@@ -28,7 +28,8 @@ enough for now". Production grade is the only grade.
 2. **Red** — write the failing test that expresses the done-line; run it;
    watch it fail for the right reason. Target already green → the plan is
    stale: stop, "→ plan".
-3. **Green** — the minimum that passes. Resist scope; the next task exists.
+3. **Green** — the minimum that passes. Resist scope; the next task
+   exists. A new dependency? Vet it first: `references/clean-code.md`.
 4. **Still red? Root cause, never patches.** Read the error, form one
    hypothesis, test it with the smallest experiment. Forbidden patches:
    special-casing the failing input, catch-and-swallow, widening types,
@@ -54,7 +55,6 @@ enough for now". Production grade is the only grade.
 | Architecture blocks the task | stop → "→ plan"; never hack around it |
 | A bug blocks this task | stop → "→ fix"; resume the task after green |
 | A regression this task caused | yours — root-cause now (budget 2, verify's class) |
-| A new dependency is needed | vet before install — `references/clean-code.md` |
 | Pre-existing unrelated bug | log to PLAN.md Gaps; no drive-by fixes |
 
 ## Never
