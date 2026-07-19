@@ -23,7 +23,8 @@ enough for now". Production grade is the only grade.
 1. **Ground** — read the doc the task cites; re-read AGENTS.md Rules and
    Conventions before the first line (drift starts at line one). The doc
    marks an API deprecated or legacy → don't use it, however familiar.
-   Honor the task's Interfaces — neighbors consume exactly those names.
+   Work within the task's declared Files; honor its Interfaces —
+   neighbors consume exactly those names.
 2. **Red** — write the failing test that expresses the done-line; run it;
    watch it fail for the right reason. Target already green → the plan is
    stale: stop, "→ plan".
@@ -31,14 +32,16 @@ enough for now". Production grade is the only grade.
 4. **Still red? Root cause, never patches.** Read the error, form one
    hypothesis, test it with the smallest experiment. Forbidden patches:
    special-casing the failing input, catch-and-swallow, widening types,
-   sleep/retry, weakening the test. Three failed attempts → stop, write
-   attempts + hypothesis to ADR.md, ask the human.
-5. **Refactor while green** — not a crime, a duty: `references/clean-code.md`.
-6. **Extend the QA harness** — emergent tests where the code has logic:
+   suppression comments, sleep/retry, weakening the test. Three failed
+   attempts → stop, write attempts + hypothesis to ADR.md, ask the human.
+5. **Extend the QA harness** — emergent tests where the code has logic:
    `references/testing.md`.
-7. **Commit** — behavior in one feat commit, refactors in their own:
+6. **Commit the behavior** — code + its tests, one feat commit:
 
    feat(search): rank results by relevance [C3]
+
+7. **Refactor while green** — not a crime, a duty: `references/clean-code.md`.
+   Each reshaping lands in its own commit, e.g.
    refactor(search): extract scoring, delete legacy ranker [C3]
 
 8. Announce: "→ verify".
@@ -49,6 +52,7 @@ enough for now". Production grade is the only grade.
 |---|---|
 | Spec contradicts reality | stop → propose via specify, human rules |
 | Architecture blocks the task | stop → "→ plan"; never hack around it |
+| A bug blocks this task | stop → report; human picks fix-first or re-plan |
 | Unrelated bug in existing code | log to PLAN.md Gaps; no drive-by fixes |
 
 ## Never

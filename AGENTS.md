@@ -50,6 +50,6 @@ review each batch · three failed attempts → stop, ADR.md, ask me.
 |---|---|---|
 | PLAN.md | batches, gaps | plan/review; verify ticks tasks |
 | ADR.md | decisions and dead ends | any skill, append-only |
-| git log | implementation narrative | one task, one commit |
+| git log | implementation narrative | implement per task; plan per boundary |
 
 No SPEC.md yet — goals live in README until the flow stabilizes.

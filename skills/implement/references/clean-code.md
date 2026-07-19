@@ -31,6 +31,7 @@ config for one caller, no pattern without a second concrete use, no
 | `value: any` to silence the checker | model the actual type |
 | `sleep(500)` before the assert | wait on the condition, not the clock |
 | copy the function and edit one line | extract the variation point |
+| `@ts-ignore` / `eslint-disable` / `# type: ignore` | fix the violation — suppression is a silent gate-narrow |
 | delete the failing test | the test is the message — read it |
 
 The pattern behind all six: making the symptom invisible instead of making
@@ -39,9 +40,10 @@ it's a patch.
 
 ## Boundaries of a refactor
 
-- Behavior unchanged means **tests untouched and green** — a refactor
-  that needs test edits is a behavior change in disguise: stop, that's a
-  task or a spec conversation.
+- Behavior unchanged means **test assertions untouched and green** —
+  mechanical renames tracked through tests are fine; a refactor that needs
+  assertion changes is a behavior change in disguise: stop, that's a task
+  or a spec conversation.
 - Refactors ride their own `refactor(scope):` commits — never mixed with
   behavior, so the narrative ledger stays diagnosable.
 - The file map and dependency direction from PLAN.md are the design.

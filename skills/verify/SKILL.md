@@ -16,8 +16,9 @@ $ bun test
 ```
 3. Only now tick the criterion's checkbox in SPEC.md and the task's box in
    PLAN.md.
-4. Red gate → fix loop: smallest change, re-run, repeat. The stuck rule from
-   implement applies (3 attempts → ADR.md + human).
+4. Red gate → fix loop: smallest change, re-run, repeat; fix-loop changes
+   amend the task's feat commit before any box is ticked. The stuck rule
+   from implement applies (3 attempts → ADR.md + human).
 5. **Gap pass** — one honest question: what does this task claim that no gate
    actually checks? Cover it with a test now, or log it under Gaps in PLAN.md.
 

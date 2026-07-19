@@ -40,7 +40,8 @@ demand, never as a gate.
   only the human edits words, verify ticks boxes
 - **PLAN.md** — batched tasks, each citing its official doc; re-planned every batch
 - **ADR.md** — decision ledger, including three-attempt dead ends
-- **git log** — one task, one commit; the implementation narrative
+- **git log** — a feat commit per task plus separate refactor commits;
+  the implementation narrative
 - **Official docs** — via MCPs (Context7, Cloudflare Docs, Xcode…) or a `docs/`
   folder; the agent never guesses an API it hasn't read
 
