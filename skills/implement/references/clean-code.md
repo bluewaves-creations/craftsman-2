@@ -50,6 +50,19 @@ it's a patch.
   Reshaping *within* it is yours; moving a boundary is plan's — propose,
   don't drift.
 
+## New dependencies — the largest paste you'll ever commit
+
+Vet before any install, registry page open:
+1. **Exists and is the intended package** — exact name, right author,
+   real adoption. Roughly 1 in 5 hallucinated package names are live
+   registry squats; typo-distance from a popular name is a stop.
+2. **Known vulnerabilities** — advisory list for the version you'd pin.
+3. **License fits** — copyleft (GPL/AGPL) is a human decision.
+4. **Not already solved in-tree** — stdlib or an existing dep may cover
+   it; a duplicate dependency is dead code at birth.
+
+Heavy, security-adjacent, or framework-level → ADR entry before install.
+
 ## The smell test before commit
 
 Would a craftsman sign this file? No dead code, no duplication past the

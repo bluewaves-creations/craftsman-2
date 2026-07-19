@@ -54,6 +54,7 @@ enough for now". Production grade is the only grade.
 | Architecture blocks the task | stop → "→ plan"; never hack around it |
 | A bug blocks this task | stop → "→ fix"; resume the task after green |
 | A regression this task caused | yours — root-cause now (budget 2, verify's class) |
+| A new dependency is needed | vet before install — `references/clean-code.md` |
 | Pre-existing unrelated bug | log to PLAN.md Gaps; no drive-by fixes |
 
 ## Never
