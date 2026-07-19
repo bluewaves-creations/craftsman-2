@@ -11,6 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v8.3.2
+        with:
+          enable-cache: false  # no Python lockfiles here — the default glob warns every run
       - name: Structure gate
         run: scripts/check.sh
       - name: Open-spec validator (explicit — fails loud even if uvx vanishes from check.sh's path)
