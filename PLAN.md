@@ -4,22 +4,22 @@ Adapts at every batch boundary. Spec proxy until SPEC.md exists: the three
 core goals — quality, speed, token efficiency (README).
 
 ## Batch 1 — AGENTS.md template v2
-- [ ] 1.1 Add **Rules** section — perpetual tier only: universal seed
+- [x] 1.1 Add **Rules** section — perpetual tier only: universal seed
       (modern-first with docs-beat-memory, YAGNI, DRY-on-proof,
       comments-say-why with bad→good micro-example) + placeholder slots for
       stack-specific perpetual rules filled at init. Header states the split:
       perpetual here, activity rules in the skills.
       Done: rule set approved by human; template within budget.
-- [ ] 1.2 Rework **Workflow → Flow**: state→skill routing table for exact
+- [x] 1.2 Rework **Workflow → Flow**: state→skill routing table for exact
       triggering, announce-the-active-skill convention, fresh-session
       re-entry row (read SPEC, PLAN batch, ADR, git log — then route).
       Doc: code.claude.com/docs skills triggering. Done: every row names an
       existing skill in skills/.
-- [ ] 1.3 Add **Ledgers** table (artifact · what it records · who writes) and
+- [x] 1.3 Add **Ledgers** table (artifact · what it records · who writes) and
       compress the standing contract (spec freeze + checkbox carve-out,
       plan adapts, 3-attempts rule, extended review advisory) to 3–4 lines.
       Done: all four artifacts referenced with explicit write rules.
-- [ ] 1.4 Mirror v2 structure into this repo's own AGENTS.md; extend
+- [x] 1.4 Mirror v2 structure into this repo's own AGENTS.md; extend
       scripts/check.sh to cross-check Flow-table skill names against
       skills/ directories. Done: `scripts/check.sh` green, batch review pass.
 

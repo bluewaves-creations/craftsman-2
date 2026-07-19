@@ -17,8 +17,8 @@ Read before coding — official sources only.
 
 ## Rules
 Perpetual — bind on every line, every phase. Activity rules live in the skills.
-- **Modern first** — the stack's latest official idioms. When memory and
-  Documentation disagree, Documentation wins; training data is stale.
+- **Modern first** — the stack's latest official idioms. When memory and the
+  Documentation sources disagree, the docs win; training data is stale.
 - **YAGNI** — build what the spec asks. The next task exists.
 - **DRY on proof** — extract at the third occurrence, not the first.
 - **Comments say why, never what**:
@@ -55,7 +55,7 @@ Announce the active skill ("→ implement, task 2.1"). Route by state:
 |---|---|
 | Direction unclear — new project or pivot | brainstorm |
 | Work described, no acceptance criteria | specify |
-| Spec approved · batch boundary passed | plan |
+| Spec approved, or batch boundary passed | plan |
 | Next task open in PLAN.md | implement |
 | Task code complete | verify |
 | Batch tasks all verified | review |

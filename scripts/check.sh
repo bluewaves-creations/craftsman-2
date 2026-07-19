@@ -24,8 +24,11 @@ for dir in skills/*/; do
   done
 done
 
+# Contract: the Flow table is 2-column with the skill name in column 2.
 tmpl="skills/craftsman-mode/references/AGENTS.template.md"
-for sk in $(awk -F'|' '/^## /{f=($0=="## Flow")} f && NF==4 {n=$3; gsub(/[[:space:]]/,"",n); if (n ~ /^[a-z][a-z-]*$/) print n}' "$tmpl" | sort -u); do
+flow_skills=$(awk -F'|' '/^## Flow[[:space:]]*$/{f=1;next} /^## /{f=0} f && NF==4 {n=$3; gsub(/[[:space:]]/,"",n); if (n ~ /^[a-z][a-z-]*$/) print n}' "$tmpl" | sort -u)
+[ -n "$flow_skills" ] || err "no skill names extracted from the Flow table in $tmpl"
+for sk in $flow_skills; do
   [ -d "skills/$sk" ] || err "Flow table names '$sk' but skills/$sk is missing"
 done
 
