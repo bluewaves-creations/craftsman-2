@@ -99,7 +99,7 @@ Two ancestors, one lesson each:
 - **Craftsman v1** (machine-enforced): its irreplaceable insight is that
   LLM self-assessment is unreliable — verdicts must be exit codes. Kept,
   minus the 22k-line CLI: the project's own toolchain is the verdict
-  machine.
+  machine. Coming from v1? [What replaces what](docs/migrating-from-v1.md).
 - **Superpowers** (behavior-engineered): its insight is progressive
   disclosure — keep almost nothing always-resident. Kept, minus the
   ceremony: examples over iron laws, trust over rationalization tables.
