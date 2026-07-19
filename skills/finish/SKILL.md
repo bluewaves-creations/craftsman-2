@@ -1,26 +1,60 @@
 ---
 name: finish
-description: Use when all spec criteria are green and the work is ready to ship — final QA, consolidation, and documentation
+description: >
+  Turn a finished batch series into a finished piece of work — full QA,
+  consolidation, documentation, delivery. Use when every criterion in
+  SPEC.md is ticked and the last batch review is closed ("finish", "wrap
+  up", "ship it", "are we done?"). Not for closing a batch (review → plan),
+  not for proving a task (verify), and never while a criterion is unticked.
+license: MIT
+compatibility: Requires the gate commands from AGENTS.md and git.
+metadata:
+  version: "0.2.0"
 ---
 
 # Finish
 
-Production finishing. Nothing new gets built here; everything built gets
-proven, consolidated, documented.
+Finishing is not stopping — it is the pass that turns a working batch
+series into a finished piece of work. Nothing new gets built here;
+everything built gets proven, consolidated, documented, delivered.
+
+**Preflight guard**: any criterion unticked, batch unreviewed, or boundary
+unclosed → this is not finish; name what's open and route back. Every
+"Deferred — open questions" entry in SPEC.md: resolved, or explicitly
+carried by the human.
 
 ## Method
-1. **Full QA** — every gate, full scope, no narrowing. Walk SPEC.md: every
-   criterion ticked, each backed by a test or a recorded hands-on check.
-2. **Gap sweep** — hunt what slipped between tasks: error paths, empty states,
-   the Gaps list in PLAN.md. Offer an extended review if the surface is large.
-3. **Consolidate ADR.md** — collapse dead-end entries into the decisions that
-   held; future sessions read this ledger before re-litigating.
-4. **Documentation** — README quickstart true on a clean machine; AGENTS.md
-   still accurate (stack, gates, conventions). It is the next session's
-   constitution — staleness compounds.
-5. **Ship** — final commit; tag or release per project habit. Report: what
-   shipped, what's deferred (with ADR reference), suggested next spec.
+
+1. **Gaps triage** — every PLAN.md Gaps entry disposed, none silent:
+   fix now (implement → verify loop), defer (ADR.md entry with the
+   reason), or the human accepts it as-is.
+2. **Full QA** — every gate, full scope, fresh, on the final tree —
+   verify's evidence rules apply. Walk SPEC.md: each C-id's demonstration
+   re-confirmed. Red → bounded loop, 3 rounds per gate, then stop and
+   report.
+3. **Improvement pass** — offer an extended review (advisory). Accepted
+   findings become one final improvement batch through the normal
+   implement → verify → review loop.
+4. **Consolidate ADR.md** — propose merges of related entries, compress
+   tried-and-failed history to terse lines — never delete it. Stale
+   detection: a decision the code has moved past → "confirm or
+   supersede?", the human rules on each. Every consolidation
+   human-approved. Details: `references/completion.md`.
+5. **Documentation, true on a clean machine** — README quickstart
+   commands actually run, not skimmed; AGENTS.md accuracy pass (stack,
+   gates, conventions, rules still observed facts — propose minimal
+   corrections). No invented doc obligations: only what AGENTS.md says
+   the project keeps.
+6. **Close and deliver** — final State entry in PLAN.md (shipped,
+   deferred with ADR refs, suggested next spec); final commit; delivery
+   menu — merge · push + PR · tag a release · keep as-is — the human
+   picks; discard requires the human to type "discard". Finish is a
+   boundary: suggest compaction; everything durable is on disk.
 
 ## Never
-- Ship with a criterion unticked "because it obviously works."
-- Leave AGENTS.md describing a project that no longer exists.
+
+- Finish with a criterion unticked, a Gap undisposed, or a red gate.
+- Consolidate or delete ADR history without human approval.
+- Ship documentation you didn't re-verify against the tree.
+- Execute a destructive delivery without its typed confirmation.
+- Build new behavior here — new wants route to specify.

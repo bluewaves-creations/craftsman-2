@@ -48,9 +48,9 @@ moves; the plan does. Each task must execute without re-reading the plan.
    the batch entering the 2-batch horizon to full anatomy. Commit the
    re-planned PLAN.md — the boundary commit, noting consequential
    re-orderings.
-2. **Gap check**: every unticked C-id in exactly one remaining batch;
-   surface approaches the batch invalidated — every gap is a plan change,
-   never silent.
+2. **Gap check**: every unticked C-id in exactly one remaining batch —
+   none left → suggest "→ finish". Surface invalidated approaches —
+   every gap is a plan change, never silent.
 3. **Extract** into PLAN.md `## State`: decisions and why, failed
    approaches and reasons, open questions. Only what disk and git cannot
    re-derive.
