@@ -4,7 +4,11 @@ Adapts at every batch boundary. The spec never moves: SPEC.md C1–C18
 (approved 2026-07-19), replacing the founding-brief proxy.
 
 ## State
-- In flight: nothing — next: batch 17 (pilot) on human go.
+- In flight: 17.2 pilot running — PI harness + MiniMax M3 (human
+  decision: stress-test skills on a non-Claude harness and a weaker
+  model; feeds the deferred commit-hook question). Session log with
+  per-message usage: ~/.pi/agent/sessions/--Users-bertrand-Developer-
+  craftsman-pilot--/2026-07-19T16-54-*.jsonl.
 - Standing decisions: pilot (C13) runs before public release so README
   claims cite measured numbers (human-approved); commit-hook backstop
   deferred until pilot evidence (ADR 2026-07-19).
