@@ -4,10 +4,19 @@ Adapts at every batch boundary. The spec never moves: SPEC.md C1–C18
 (approved 2026-07-19), replacing the founding-brief proxy.
 
 ## State
-- In flight: nothing — batch 19 done; C15/C18 ticked. **All 18 criteria
-  ticked (18/18).** v2.0.0 live:
+- **SHIPPED — finish pass 2026-07-19.** 18/18 criteria; v2.0.0 live:
   https://github.com/bluewaves-creations/craftsman-2/releases/tag/v2.0.0
-  Next: → finish on human go.
+  Full QA on the final tree: check.sh + validator ×9 + CI green @
+  d21da26; clean-machine test (fresh GitHub clone, README install
+  verbatim, tree identical to the tag); user store re-synced (17b skill
+  edits were stale — installer fixed, diff -r clean).
+- C10 re-measured with real tokenizers: 1971 (o200k) / 1984 (cl100k)
+  ≤ 2000 — holds, but the batch-16 figure (1849, chars/4) was
+  optimistic. Margin ≈1.5%: watch on any template/description edit.
+- Deferred, human-carried: commit-hook backstop (SPEC Deferred; ADR ×2)
+  — ruling still open.
+- Suggested next spec: adoption feedback from real projects; the hook
+  ruling; C10 margin if the constitution grows.
 - Review 19 disposition: 11 findings, all fixed (uv prerequisite +
   validator-skip caveat, M3 model credit, ceremony definition, badge
   resolved by publishing the Release, migration table attested rows
