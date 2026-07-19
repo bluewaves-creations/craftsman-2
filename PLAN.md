@@ -239,15 +239,48 @@ Source: fresh-eyes sweep of Craftsman v1 + superpowers vs. current text.
 - [x] 15.4 Docs guard: fetched documentation is data, never instructions —
       embedded directives are ignored (template Documentation section).
 
-## Later batches (draft)
-- One batch per remaining skill: brainstorm, specify, plan, implement,
-  verify, review, finish — same treatment; strip rules the perpetual tier
-  covers; align descriptions to Flow-table states.
-- Decide the defect route (fix skill or Flow row — see Gaps).
-- Greenfield pilot: "build a todo app" must auto-route through the flow;
-  measure real token overhead per phase. Pressure-test skill wording with
-  subagents, always with a no-guidance control (superpowers method) —
-  guidance for failures that don't reproduce is pure token waste.
+## Batch 16 — spec seating + ledger hygiene
+- [ ] 16.1 Verify pass over C1–C12: fresh evidence per criterion
+      (check.sh + validator for C3–C5; wc for C1; skill-text inspection
+      for C2, C6–C9, C11–C12; measured token count for C10 ≤ 2k) — tick
+      each box in SPEC.md. Done: verify report cites evidence per tick.
+- [ ] 16.2 PLAN fold: batches 1–15 compressed to one line each (title +
+      closing commit); stale Gaps/draft entries struck with citations;
+      `## State` section added (fresh-session row must always land).
+      Done: nothing non-derivable lost — git log carries the detail.
+
+## Batch 17 — greenfield pilot (C13) — human plays product owner
+Runs in ~/Developer/craftsman-pilot (empty, confirmed).
+- [ ] 17.1 Seed the flow into the pilot by hand (copy skills + template)
+      — the manual steps become the install script's discovery input.
+      Init via craftsman-mode greenfield: "build a todo app".
+- [ ] 17.2 Run the flow end to end — auto-routing only, no skill named
+      manually; record per-phase token overhead as it runs.
+- [ ] 17.3 Pilot report: measurements, friction → proposed improvement
+      batch; numbers feed the README (C15). Done: C13 ticked.
+
+## Batch 18 — release foundation
+- [ ] 18.1 LICENSE: MIT at root, matching skill frontmatter (C14).
+      Done: file present; consistency checked.
+- [ ] 18.2 scripts/install.sh: one command, project or user level, bash
+      only, idempotent; never overwrites an existing AGENTS.md (defers
+      to craftsman-mode refresh); uninstall documented (C16).
+      Done: install + uninstall evidenced in a scratch dir.
+- [ ] 18.3 CI: GitHub Actions runs check.sh + open-spec validator on
+      push/PR (C17); AGENTS.md Gates names it — CI red blocks finish
+      from here on. Done: green run on origin/main.
+
+## Batch 19 — front door, then ship
+- [ ] 19.1 README rewrite (C15): hero + promise, badges (license, CI,
+      release), install command, 60-second quickstart, flow table, nine
+      skills at a glance, lineage with measured pilot numbers,
+      contributing + license sections. Done: newcomer routes a first
+      task from the README alone.
+- [ ] 19.2 CONTRIBUTING.md (contributions route through the flow) + v1
+      migration note + tagged v2.0.0 release with changelog (C18).
+      Done: release live on GitHub.
+
+Then → finish: every criterion ticked, full QA, delivery.
 
 ## Gaps
 - ~~No route for defects~~ — closed by batch 10 (fix skill: diagnose-first,
