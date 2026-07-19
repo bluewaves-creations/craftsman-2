@@ -51,6 +51,6 @@ review each batch · attempt budget spent (3 default; verify classifies)
 |---|---|---|
 | PLAN.md | batches, gaps | plan/review; implement+verify log gaps; verify ticks |
 | ADR.md | decisions and dead ends | any skill, append-only |
-| git log | implementation narrative | implement per task; plan per boundary |
+| git log | implementation narrative | implement per task; plan per boundary; verify/review fixes |
 
 No SPEC.md yet — goals live in README until the flow stabilizes.

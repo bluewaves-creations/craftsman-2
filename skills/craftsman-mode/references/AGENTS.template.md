@@ -76,4 +76,4 @@ review on demand, advisory only.
 | SPEC.md | what must be true | agent drafts, I validate; verify ticks boxes |
 | PLAN.md | path, batches, gaps | plan/review; implement+verify log gaps; verify ticks |
 | ADR.md | decisions and dead ends | any skill, append-only |
-| git log | implementation narrative | implement per task; plan per boundary |
+| git log | implementation narrative | implement per task; plan per boundary; verify/review fixes |

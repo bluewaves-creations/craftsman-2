@@ -21,14 +21,18 @@ mention is still a finding. The bar is AGENTS.md — apply it, never invent
 it; propose bar changes to the human instead. Name what is *good* too —
 praise that's accurate teaches taste.
 
+Mode: batch fully verified → batch review (fixes inline). Any other ask,
+or a human-named scope → extended (advisory, no code). Unsure → ask.
+
 ## Batch review — closes every batch
 
-1. **Dispatch fresh eyes** — a read-only subagent on the batch range
-   (base..head) with: the batch's criteria and tasks, the AGENTS.md bar,
-   the checklist below, severity calibration (not everything is critical),
-   and the evidence rule — every finding cites file:line plus a failure
-   scenario or concrete counterexample. No subagent available → self-review
-   after re-reading spec and bar, same rules.
+1. **Dispatch fresh eyes** — a read-only subagent on the batch range:
+   previous boundary commit (batch 1: the spec-freeze commit) → HEAD; you
+   compute both SHAs and pass them. Give it: the batch's criteria and
+   tasks, the AGENTS.md bar, the checklist below, severity calibration
+   (not everything is critical), and the evidence rule — every finding
+   cites file:line plus a failure scenario or concrete counterexample.
+   No subagent → self-review after re-reading spec and bar, same rules.
 2. **Checklist** — spec compliance (the diff does what the criteria say,
    nothing else — and if the plan itself is wrong, say so) · architecture
    & design (`references/architecture.md`) · code quality
@@ -39,20 +43,21 @@ praise that's accurate teaches taste.
    human decides. Any finding unclear → clarify before fixing *any*;
    findings interrelate. Wrong finding → push back with reasoning.
 4. **Improvement loop** — fixes follow implement's rules (fix/refactor
-   commits) → verify (fresh evidence) → re-review the fixes. Loop until
-   no critical or important findings remain; minors: fix now or log to
-   PLAN.md Gaps with a reason — never silently dropped.
+   commits) → verify (fresh evidence) → re-review the fix diff only;
+   verify's "→ review" inside the loop resumes here — step 1's full
+   dispatch happens once per batch. Loop until no critical or important
+   findings remain; minors: fix now or log to PLAN.md Gaps with the
+   reason inline — never silently dropped.
 5. **Report** — strengths, findings with outcomes, what went to Gaps.
    Then "→ plan" (re-plan) closes the boundary.
 
 ## Extended review — on demand, advisory, never a gate
 
-The human names the scope (whole codebase, a subsystem, a concern). Load
-the lenses that fit: `references/architecture.md`,
-`references/code-quality.md`, `references/security-performance.md`.
-Output: ranked findings (critical / important / minor, evidence rule
-applies) and a proposed improvement batch for PLAN.md — the human approves
-before anything is implemented. This mode changes no code.
+The human names the scope (codebase, subsystem, concern). Load the lenses
+that fit (architecture, code-quality, security-performance references).
+Output: ranked findings (evidence rule applies) and a proposed improvement
+batch for PLAN.md — the human approves before anything is implemented.
+This mode changes no code.
 
 ## Never
 

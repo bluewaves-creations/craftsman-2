@@ -48,6 +48,17 @@ concrete counterexample. "The design feels off" is not a finding.
   codebase? A second pattern for an existing problem needs an ADR, not a
   precedent.
 
+## Concurrency & state
+
+- Check-then-act on shared state: is the read-modify-write atomic, or is
+  there a window (TOCTOU, lost update)?
+- Await/lock ordering consistent across call sites; anything unawaited
+  that the caller assumes finished?
+- Reentrancy: can this handler fire again before its first run completes,
+  and does the state survive that?
+- Shared caches and singletons written from more than one path — who
+  invalidates, and when?
+
 ## Scale & integration seams
 
 - What breaks first at 10x data / users / calls? Name the seam, not a
