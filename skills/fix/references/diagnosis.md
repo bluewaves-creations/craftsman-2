@@ -28,6 +28,8 @@ git bisect run <the reproduce command>
 
 The commit's diff narrows the cause to lines; its message and C-id tell
 you what the change *meant* to do — the fix must preserve that intent.
+Bisect only with a deterministic repro — a flaky command lands on the
+wrong commit.
 
 ## Differential debugging
 

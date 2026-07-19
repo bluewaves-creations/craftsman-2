@@ -53,7 +53,8 @@ enough for now". Production grade is the only grade.
 | Spec contradicts reality | stop → propose via specify, human rules |
 | Architecture blocks the task | stop → "→ plan"; never hack around it |
 | A bug blocks this task | stop → "→ fix"; resume the task after green |
-| Unrelated bug in existing code | log to PLAN.md Gaps; no drive-by fixes |
+| A regression this task caused | yours — root-cause it now (step 4) |
+| Pre-existing unrelated bug | log to PLAN.md Gaps; no drive-by fixes |
 
 ## Never
 

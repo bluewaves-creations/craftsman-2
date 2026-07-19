@@ -4,9 +4,9 @@ description: >
   Diagnose and repair a defect at its root cause — never the symptom.
   Use when something is broken outside the current task loop: "fix this bug",
   "it crashes", "tests are failing", "why does X happen", a regression
-  surfaces, or implement hands off a blocking bug. Not for a task's own
-  red test (implement), a red gate inside verify's fix loop (verify), new
-  behavior (specify), or improvement without a defect (review).
+  surfaces outside any task loop, or implement hands off a blocking bug.
+  Not for a task's own red test (implement), verify's in-loop red gates,
+  new behavior (specify), or improvement without a defect (review).
 license: MIT
 compatibility: Requires the gate commands from AGENTS.md and git.
 metadata:
@@ -28,14 +28,13 @@ Diagnose runs first, always; no path to a fix skips it.
    working path against the broken one and list every difference.
 3. **Pre-action gate** — search ADR.md and `git log --grep` for the
    area: the proposed fix may already be a recorded dead end.
-4. **One hypothesis at a time** — with the smallest experiment that would
-   prove it. Three dead hypotheses → stop, report findings, human.
+4. **One hypothesis at a time** — smallest experiment that proves it.
+   Three dead → stop, hypothesis log to ADR.md, report, human.
 5. **Spec check** — violates a ticked criterion → true defect, continue.
    Behavior never specified, or the spec is what's wrong → that is
    specify's post-freeze delta; the human rules.
-6. **Report before fixing** — root cause, introducing commit if found,
-   affected scope, proposed approach. Routine → proceed. Anything
-   surprising → wait for the human.
+6. **Report before fixing** — root cause, introducing commit, scope,
+   approach. Routine → proceed; surprising → wait for the human.
 
 ## Repair
 
@@ -43,8 +42,8 @@ Diagnose runs first, always; no path to a fix skips it.
    observed, red-green re-proof per verify's evidence rules.
 2. **Minimal fix** — the root cause only. No while-I'm-here improvements,
    no drive-by renames; implement's dirty-patch table applies.
-3. **Verify** — full gates, fresh evidence. Attempt budget 3 (per
-   failure, shared with verify), then ADR.md + human.
+3. **Verify** — full gates, fresh evidence. Repair's own budget of 3
+   (diagnosis's separate), shared per failure with implement + verify.
 4. **Commit** — one commit: `fix(scope): {symptom} — {root cause}`,
    carrying the fix and its regression test together.
 
@@ -59,12 +58,13 @@ rules, separate `refactor(scope)` commit; if it breaks, it reverts alone
 | Entered from | After green |
 |---|---|
 | implement's blocked-by-bug route | resume "→ implement, task N" |
-| mid-batch discovery | resume where interrupted |
+| mid-batch discovery | resume the interrupted skill's announce |
+| finish QA or review finding | resume the caller's loop |
 | standalone report | report; revealed spec holes → Gaps or specify |
 
 ## Never
 
 - Write fix code before a reproduced, reported diagnosis.
-- Cover a symptom to get green — a try/catch around a null is a cover-up.
+- Cover a symptom to get green, or leave a fixed bug without its
+  root-cause regression test.
 - Mix fix and refactor in one commit, or smuggle in new behavior.
-- Leave a fixed bug without its root-cause regression test.

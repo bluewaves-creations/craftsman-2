@@ -76,7 +76,7 @@ commands already give).
 Context: Craftsman 1 controls via machine, Superpowers via engineered
 persuasion (iron laws, rationalization tables). Both are heavy in their way.
 Decision: lean constitution (AGENTS.md ≤100 lines, read every turn, never
-compacted) + eight sharp skills (≤70 lines) built on one example per
+compacted) + a set of sharp skills (≤70 lines) built on one example per
 convention. Budgets enforced by `scripts/check.sh`.
 Rejected: heavy behavioral skills (token cost, ceremony on small tasks);
 trailer-based ledgers (without a single-writer CLI a commit trailer is prose,

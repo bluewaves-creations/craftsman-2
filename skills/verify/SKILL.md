@@ -5,7 +5,7 @@ description: >
   self-assessment. Use when a task's implementation is complete, before any
   claim of done, fixed, or passing, before moving to the next task, or when
   the human says "prove it" or asks "does it work?". Not for writing code
-  (implement), judging
+  (implement), repairing out-of-loop defects (fix), judging
   quality (review), or closing the boundary (plan re-plan).
 license: MIT
 compatibility: Requires the gate commands declared in AGENTS.md; git for the amend path.

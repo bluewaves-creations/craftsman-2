@@ -75,6 +75,6 @@ review on demand, advisory only.
 | Artifact | Records | Written by |
 |---|---|---|
 | SPEC.md | what must be true | agent drafts, I validate; verify ticks boxes |
-| PLAN.md | path, batches, gaps | plan/review; implement+verify log gaps; verify ticks; finish closes |
+| PLAN.md | path, batches, gaps | plan/review; implement+verify+fix log gaps; verify ticks; finish closes |
 | ADR.md | decisions and dead ends | any skill appends; finish consolidates, human-gated |
-| git log | implementation narrative | implement per task; plan per boundary; verify/review fixes |
+| git log | implementation narrative | implement per task; plan per boundary; verify/review/fix fixes |

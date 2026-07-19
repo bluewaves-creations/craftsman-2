@@ -4,7 +4,7 @@
 
 ## Vision
 A lean development flow for frontier coding agents: a ≤100-line AGENTS.md
-constitution, eight sharp skills, verdicts by exit code. Better results than
+constitution, nine sharp skills, verdicts by exit code. Better results than
 CLI-enforced or behavior-heavy flows, at a fraction of the tokens.
 
 ## Stack
@@ -49,8 +49,8 @@ review each batch · attempt budget spent (3 default; verify classifies)
 ## Ledgers
 | Artifact | Records | Written by |
 |---|---|---|
-| PLAN.md | batches, gaps | plan/review; implement+verify log gaps; verify ticks; finish closes |
+| PLAN.md | batches, gaps | plan/review; implement+verify+fix log gaps; verify ticks; finish closes |
 | ADR.md | decisions and dead ends | any skill appends; finish consolidates, human-gated |
-| git log | implementation narrative | implement per task; plan per boundary; verify/review fixes |
+| git log | implementation narrative | implement per task; plan per boundary; verify/review/fix fixes |
 
 No SPEC.md yet — goals live in README until the flow stabilizes.
