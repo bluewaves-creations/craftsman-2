@@ -24,4 +24,9 @@ for dir in skills/*/; do
   done
 done
 
+tmpl="skills/craftsman-mode/references/AGENTS.template.md"
+for sk in $(awk -F'|' '/^## /{f=($0=="## Flow")} f && NF==4 {n=$3; gsub(/[[:space:]]/,"",n); if (n ~ /^[a-z][a-z-]*$/) print n}' "$tmpl" | sort -u); do
+  [ -d "skills/$sk" ] || err "Flow table names '$sk' but skills/$sk is missing"
+done
+
 [ "$fail" -eq 0 ] && echo "check: all green" || exit 1

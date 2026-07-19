@@ -15,9 +15,14 @@ CLI-enforced or behavior-heavy flows, at a fraction of the tokens.
 - Skill authoring: https://code.claude.com/docs/en/skills
 - Lineage and philosophy: README.md
 
-## Gates
-Green means exit 0, evidence pasted.
-- Check: `scripts/check.sh` (structure, frontmatter, line budgets)
+## Rules
+Perpetual — bind on every edit. Activity rules live in the skills.
+- **Modern first** — skill and harness behavior verified against current
+  Claude Code docs, not memory.
+- **YAGNI** — the flow gains a feature when a real project needed it.
+- **DRY on proof** — extract shared skill text at the third occurrence.
+- **Show, don't tell** — one example beats a paragraph of rules; cut prose
+  before cutting examples.
 
 ## Conventions
 Skill descriptions state when, never what:
@@ -26,18 +31,23 @@ Skill descriptions state when, never what:
 description: Use when a task's implementation is complete — prove it with gate evidence
 ```
 
-Show one example instead of a paragraph of rules:
-
-```markdown
-## Shape of a good criterion
-Bad: "Search should be fast."
-Good: "- [ ] Searching 'renoir' returns ranked artists, under 300 ms at 10k records."
-```
-
 Budgets: AGENTS.md ≤ 100 lines · SKILL.md ≤ 70 · reference file ≤ 120.
-Cut prose before cutting examples.
 
-## Workflow
-This repo is its own product — edits follow the flow: change → run the gate →
-review against the budgets. Skills live in `skills/`; project templates in
-`skills/craftsman-mode/references/`. Decisions land in ADR.md, one commit per task.
+## Gates
+Green means exit 0, evidence pasted.
+- Check: `scripts/check.sh` (structure, frontmatter, budgets, Flow↔skills)
+
+## Flow
+This repo is its own product — edits route through the same state table as
+any project (see skills/craftsman-mode/references/AGENTS.template.md).
+Announce the active skill. Batches of 2–4 tasks · verify each task ·
+review each batch · three failed attempts → stop, ADR.md, ask me.
+
+## Ledgers
+| Artifact | Records | Written by |
+|---|---|---|
+| PLAN.md | batches, gaps | plan/review; verify ticks tasks |
+| ADR.md | decisions and dead ends | any skill, append-only |
+| git log | implementation narrative | one task, one commit |
+
+No SPEC.md yet — goals live in README until the flow stabilizes.
