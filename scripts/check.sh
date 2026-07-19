@@ -15,8 +15,10 @@ for dir in skills/*/; do
   lines=$(wc -l < "$s" | tr -d ' ')
   [ "$lines" -le 70 ] || err "$s is $lines lines (budget 70)"
   head -1 "$s" | grep -q '^---$' || err "$s missing frontmatter"
-  grep -q '^name: ' "$s" || err "$s frontmatter missing name"
-  grep -q '^description: Use when' "$s" || err "$s description must start 'Use when'"
+  base=$(basename "${dir%/}")
+  grep -q "^name: $base\$" "$s" || err "$s frontmatter name must be '$base' (match directory)"
+  awk '/^---$/{c++; next} c==1' "$s" | grep -q 'Use when' \
+    || err "$s description must state triggers ('Use when …')"
   for ref in "${dir}references/"*.md; do
     [ -e "$ref" ] || continue
     rl=$(wc -l < "$ref" | tr -d ' ')
