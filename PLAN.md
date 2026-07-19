@@ -4,8 +4,10 @@ Adapts at every batch boundary. The spec never moves: SPEC.md C1–C18
 (approved 2026-07-19), replacing the founding-brief proxy.
 
 ## State
-- In flight: nothing — batch 17 done, C13 ticked. Next: batch 17b
-  (pilot findings) on human go, then 18–19 (release).
+- In flight: batch 18 (release foundation) — go given 2026-07-19.
+  Batches 17 + 17b done; C13 ticked; stops now structural in plan skill.
+- Release ritual: after skill edits land here, re-sync `~/.agents/skills`
+  (18.2's installer makes it one command).
 - Pilot outcome: shipped 16/16 on PI, M3→GLM 5.2, $7.07, zero process
   steering — full report: docs/pilot-2026-07-19.md.
 - Standing decisions: pilot (C13) runs before public release so README
