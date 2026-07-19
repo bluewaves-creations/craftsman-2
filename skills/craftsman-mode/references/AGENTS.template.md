@@ -15,6 +15,19 @@ Read before coding — official sources only.
 - {Framework}: {MCP server or docs/ path}
 - {Library}: {MCP server or docs/ path}
 
+## Rules
+Perpetual — bind on every line, every phase. Activity rules live in the skills.
+- **Modern first** — the stack's latest official idioms. When memory and
+  Documentation disagree, Documentation wins; training data is stale.
+- **YAGNI** — build what the spec asks. The next task exists.
+- **DRY on proof** — extract at the third occurrence, not the first.
+- **Comments say why, never what**:
+  ✗ `// increment retry counter`
+  ✓ `// idempotency keys expire after 24h — refresh before retry`
+- {Stack rule — seeded at init from official docs, e.g. "Swift: actors over
+  locks; async/await, never completion handlers"}
+- {Stack rule}
+
 ## Gates
 Green means exit 0, evidence pasted. Run by verify at the end of every task.
 - Test: `{command}`
