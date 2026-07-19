@@ -52,6 +52,17 @@ copy is behavior, comments and docs are not) skips plan and review —
 never the gates: full gates, evidence, one typed commit. Dep bumps are
 never quick-path — behavior-neutrality isn't eyeball-checkable.
 
+## Red flags
+Thoughts that precede a broken rule — stop and route instead:
+| Thought | Reality |
+|---|---|
+| "Basically green" · "unrelated failure" | Red is red — route: fix, or spend budget. |
+| "I can see it's correct" | Evidence is exit codes, never reading. |
+| "Done!" · "Perfect!" before gates | Satisfaction words are unverified claims. |
+| "I'll write the test after the fix" | A test that never failed proves nothing. |
+| "Too small to spec / review" | Route by observable behavior, never size. |
+| "The spec surely meant…" | Propose a delta; validation is human. |
+
 ## Ledgers
 | Artifact | Records | Written by |
 |---|---|---|
