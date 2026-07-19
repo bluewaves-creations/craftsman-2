@@ -6,7 +6,7 @@ Adapts at every batch boundary. The spec never moves: SPEC.md C1–C18
 ## State
 - In flight: nothing — batch 17 done, C13 ticked. Next: batch 17b
   (pilot findings) on human go, then 18–19 (release).
-- Pilot outcome: shipped 16/16 on PI + GLM 5.2, $7.07, zero process
+- Pilot outcome: shipped 16/16 on PI, M3→GLM 5.2, $7.07, zero process
   steering — full report: docs/pilot-2026-07-19.md.
 - Standing decisions: pilot (C13) runs before public release so README
   claims cite measured numbers (human-approved); commit-hook backstop
