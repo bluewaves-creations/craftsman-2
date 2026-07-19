@@ -1,36 +1,62 @@
 ---
 name: implement
-description: Use when executing a planned task — writing the code that turns a spec criterion green
+description: >
+  Execute one planned task to production grade — docs-grounded TDD that
+  turns its C-id green. Use when a task is open in PLAN.md ("implement",
+  "continue", "next task", "task 2.1"), after plan hands off, or when
+  resuming mid-batch. Not for batching (plan), proving done (verify),
+  judging the batch (review), or changing criteria (specify).
+license: MIT
+compatibility: Best with official-docs access (MCP servers or docs/); requires git.
+metadata:
+  version: "0.2.0"
 ---
 
 # Implement
 
-One task at a time, test first, docs open.
+One task at a time, test first, docs open. Zero implementation gap: done
+means the done-line demonstrably true — no stubs, no TODOs, no "good
+enough for now". Production grade is the only grade.
 
-## Method
-1. **Ground** — read the doc the plan cites, plus anything official you need.
-   Never guess an API you haven't read. Honor the task's declared
-   Interfaces — neighboring tasks consume exactly those names and types.
-2. **Red** — write the failing test that expresses the task's done-line.
-   Run it; watch it fail for the right reason.
+## Task loop
+
+1. **Ground** — read the doc the task cites; re-read AGENTS.md Rules and
+   Conventions before the first line (drift starts at line one). The doc
+   marks an API deprecated or legacy → don't use it, however familiar.
+   Honor the task's Interfaces — neighbors consume exactly those names.
+2. **Red** — write the failing test that expresses the done-line; run it;
+   watch it fail for the right reason. Target already green → the plan is
+   stale: stop, "→ plan".
 3. **Green** — the minimum that passes. Resist scope; the next task exists.
-4. **Refactor** — while green: naming, duplication, structure. Enrich the test
-   suite where the code revealed a seam worth pinning.
-5. **Commit** — one task, one commit:
-```
-feat(search): rank results by relevance [C3]
+4. **Still red? Root cause, never patches.** Read the error, form one
+   hypothesis, test it with the smallest experiment. Forbidden patches:
+   special-casing the failing input, catch-and-swallow, widening types,
+   sleep/retry, weakening the test. Three failed attempts → stop, write
+   attempts + hypothesis to ADR.md, ask the human.
+5. **Refactor while green** — not a crime, a duty: `references/clean-code.md`.
+6. **Extend the QA harness** — emergent tests where the code has logic:
+   `references/testing.md`.
+7. **Commit** — behavior in one feat commit, refactors in their own:
 
-Postgres ts_rank over title+bio. Empty query short-circuits
-to recents per spec edge case.
-```
-6. Hand to verify.
+   feat(search): rank results by relevance [C3]
+   refactor(search): extract scoring, delete legacy ranker [C3]
 
-## Stuck rule
-Three failed attempts at the same problem: stop. Write the attempts and your
-best hypothesis to ADR.md, and bring it to the human. A fourth attempt in the
-same context wastes what a fresh look or a human answer solves in minutes.
+8. Announce: "→ verify".
+
+## Discovery routes — never absorb, always route
+
+| Found mid-task | Route |
+|---|---|
+| Spec contradicts reality | stop → propose via specify, human rules |
+| Architecture blocks the task | stop → "→ plan"; never hack around it |
+| Unrelated bug in existing code | log to PLAN.md Gaps; no drive-by fixes |
 
 ## Never
-- Code before the failing test exists.
+
+- Code before the failing test exists, or against an API you haven't
+  grounded in current docs this session.
+- Cross an architecture boundary "just this once" — the file map and
+  dependency direction are the design; hacks route to plan.
+- Leave a stub, TODO, or partial path behind a flag.
 - Weaken or delete a test to make it pass — that's a spec conversation.
-- Mix a fix and a refactor in one commit.
+- Mix behavior and refactor in one commit.
