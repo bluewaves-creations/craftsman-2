@@ -27,6 +27,7 @@ CLI and without heavyweight behavioral skills.
 | `plan` | per feature + each batch | How do we get there? Adapts; spec doesn't |
 | `implement` | per task | Docs → failing test → minimal green → refactor |
 | `verify` | end of every task | All gates, pasted evidence, gap pass |
+| `fix` | on defect | Diagnose first; repair at the root cause |
 | `review` | end of every batch | Fresh-eyes checklist + improvement loop |
 | `finish` | ship | Full QA, ADR consolidation, docs |
 

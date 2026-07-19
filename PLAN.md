@@ -173,8 +173,8 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
   measure real token overhead per phase.
 
 ## Gaps
-- No route for defects: the flow only moves forward; a bug found mid-flight
-  has no diagnose-first path (Craftsman 1 had one).
+- ~~No route for defects~~ — closed by batch 10 (fix skill: diagnose-first,
+  Flow row, implement blocked-by-bug route).
 - No mechanical link yet between template promises and skills that exist
   (1.4 closes part of it).
 - No trivial-change policy: does a typo fix pay the full flow?

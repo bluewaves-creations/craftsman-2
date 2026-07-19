@@ -58,6 +58,7 @@ Announce the active skill ("→ implement, task 2.1"). Route by state:
 | Spec approved, or batch boundary passed | plan |
 | Next task open in PLAN.md | implement |
 | Task code complete | verify |
+| Defect — broken, crashing, regressed, outside the task loop | fix |
 | Batch tasks all verified | review |
 | Every criterion ticked, last batch reviewed | finish |
 
