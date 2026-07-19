@@ -13,7 +13,8 @@ frontier model given a lean constitution, one good example per convention,
 and mechanical gates produces craftsman-grade software on its own.
 
 **Measured, not promised** — one greenfield pilot, one prompt ("build a
-todo app"), on a *non-Claude* harness (PI) and a mid-tier model (GLM 5.2):
+todo app"), on a *non-Claude* harness (PI) and mid-tier models
+(MiniMax M3 → GLM 5.2):
 16/16 spec criteria shipped, 53/53 tests, 44 typed commits, 5 reviewed
 batches, **$7.07**. Twelve human messages — product decisions, one
 (withdrawn) defect report, two bare continues; no skill named, zero
@@ -40,8 +41,9 @@ craftsman-2/scripts/install.sh
 
 One command, bash only, idempotent. Default is user level — the nine
 skills land in `~/.agents/skills` (the [Agent Skills](https://agentskills.io)
-open-standard store) and `~/.claude/skills` is linked to it, so Claude
-Code and any open-standard harness discover them. Run with `--project`
+open-standard store) and `~/.claude/skills` is linked to it (or, if
+that's already a real directory, copied into), so Claude Code and any
+open-standard harness discover them. Run with `--project`
 from a project root to install for that project only. It never touches
 your `AGENTS.md` or ledgers; uninstall is documented in the script header.
 
@@ -68,7 +70,7 @@ observable behavior skip ceremony but never the gates.
 
 | Skill | When | Purpose |
 |---|---|---|
-| `craftsman-mode` | once | Init — greenfield or brownfield |
+| `craftsman-mode` | init / refresh | Constitution — greenfield or brownfield |
 | `brainstorm` | on demand | What should this be? |
 | `specify` | per feature | What must it do? Frozen at approval |
 | `plan` | per feature + each batch | How do we get there? Adapts; spec doesn't |
@@ -107,7 +109,7 @@ Two ancestors, one lesson each:
 The bet on top of both: frontier models follow shape better than rules.
 Show one good example and they generalize; write ten paragraphs of
 prohibition and they rationalize. The pilot puts a price on the flow's
-ceremony: ≈53% of turns (reviews, verification, boundaries) bought 5
+ceremony: ≈53% of turns (everything except implement) bought 5
 review passes with every finding fixed, 4 ADR entries with rejected
 alternatives, and a git log auditable commit by commit — on a mid-tier
 model.

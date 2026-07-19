@@ -11,8 +11,9 @@ flow it ships. There is no other door.
 2. **Spec delta.** Changes to what the flow promises are criteria first:
    propose the delta; a maintainer validates and freezes it (SPEC.md is
    human-frozen — PRs never edit it directly).
-3. **Batch.** Work lands as planned tasks with typed commits
-   (`feat:`/`fix:`/`refactor:`/`plan:`/`verify:` + `[C-id]` tags), each
+3. **Batch.** Work lands as planned tasks with typed commits carrying
+   `[C-id]` tags (the Ledgers table in AGENTS.md is the authority —
+   feat per task, plan per boundary, verify/review/fix for fixes), each
    task verified, each batch reviewed.
 4. **Gates green.** CI runs the same gates you can run locally:
 
@@ -21,17 +22,21 @@ flow it ships. There is no other door.
    uvx --from skills-ref agentskills validate skills/<name>   # open-spec, per skill
    ```
 
-   Green means exit 0 with evidence pasted in the PR. Red is red — there
-   is no "basically green".
+   The validator needs [uv](https://docs.astral.sh/uv/) — without it,
+   check.sh silently skips validation locally but CI won't. Green means
+   exit 0 with evidence pasted in the PR. Red is red — there is no
+   "basically green".
 
 ## Hard budgets
 
-`scripts/check.sh` enforces them; PRs that breach them don't merge:
+`scripts/check.sh` enforces the numbers; PRs that breach them don't merge:
 
 - `AGENTS.template.md` (and any rendered AGENTS.md) ≤ 100 lines
 - `SKILL.md` ≤ 70 lines · reference file ≤ 120 lines
-- Skill descriptions: capability + triggers + boundaries, never process
 - Every skill MIT-licensed, matching the root LICENSE
+
+Reviewer-judged, not mechanical: skill descriptions carry capability +
+triggers + boundaries, never process.
 
 ## Writing style for skills
 
