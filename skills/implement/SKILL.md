@@ -9,7 +9,8 @@ One task at a time, test first, docs open.
 
 ## Method
 1. **Ground** — read the doc the plan cites, plus anything official you need.
-   Never guess an API you haven't read.
+   Never guess an API you haven't read. Honor the task's declared
+   Interfaces — neighboring tasks consume exactly those names and types.
 2. **Red** — write the failing test that expresses the task's done-line.
    Run it; watch it fail for the right reason.
 3. **Green** — the minimum that passes. Resist scope; the next task exists.

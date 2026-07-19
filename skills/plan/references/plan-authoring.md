@@ -40,8 +40,8 @@ Files:
 Every field earns its place: **C-id** ties work to the spec; **Doc** is the
 official source with section, read before coding; **Files** are exact
 paths; **Interfaces** are the cross-task contract — exact names and types
-a neighboring task relies on; **Done** is mechanical — a gate command plus
-an observable demonstration.
+a neighboring task relies on; **Done** is mechanical — a demonstration
+command plus an observable result (verify still runs every gate in full).
 
 ## Right-sizing
 

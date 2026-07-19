@@ -33,7 +33,7 @@ Architecture: {2–3 sentences} · Constraints: {from the spec, exact values}
 
 ## Batch 1 — walking skeleton
 - [ ] 1.1 {Task} (C{n}). Doc: {source}. Files: {exact paths}.
-      Done: {gate command + observable demonstration}.
+      Interfaces: {produces / consumes}. Done: {command + observable result}.
 
 ## Gaps
 - {claim no gate checks yet}
