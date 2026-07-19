@@ -86,15 +86,25 @@ Runs in ~/Developer/craftsman-pilot (empty, confirmed).
   not thread loss; fix routed and diagnosed correctly).
 
 ## Batch 18 — release foundation
-- [ ] 18.1 LICENSE: MIT at root, matching skill frontmatter (C14).
-      Done: file present; consistency checked.
-- [ ] 18.2 scripts/install.sh: one command, project or user level, bash
+- [x] 18.1 LICENSE: MIT at root, matching skill frontmatter (C14).
+      Done: `head -1 LICENSE` = "MIT License", Copyright (c) 2026
+      Bluewaves (human-corrected mid-task); 9/9 skills declare
+      `license: MIT`. (a9d66c9)
+- [x] 18.2 scripts/install.sh: one command, project or user level, bash
       only, idempotent; never overwrites an existing AGENTS.md (defers
       to craftsman-mode refresh); uninstall documented (C16).
-      Done: install + uninstall evidenced in a scratch dir.
-- [ ] 18.3 CI: GitHub Actions runs check.sh + open-spec validator on
+      Done: scratch-sandbox evidence — fresh user-level install
+      "install: all green" + symlink created; re-run exit=0 with
+      `diff -r` identical ×9; real `.claude/skills` dir copied into
+      (never symlinked over), neighbour skill preserved; --project
+      installs locally, AGENTS.md md5 unchanged; documented uninstall
+      loop leaves store empty; bad flag prints usage, exit=2. (2bf2c06)
+- [x] 18.3 CI: GitHub Actions runs check.sh + open-spec validator on
       push/PR (C17); AGENTS.md Gates names it — CI red blocks finish
-      from here on. Done: green run on origin/main.
+      from here on. Done: `gates` workflow, checkout@v7 +
+      setup-uv@v8.3.2 pinned (modern-first, immutable releases);
+      `gh run watch --exit-status` exit=0, "success @ 7ad3e06" on
+      origin/main. (43dc2c6 + 7ad3e06 cache-warning fix)
 
 ## Batch 19 — front door, then ship
 - [ ] 19.1 README rewrite (C15): hero + promise, badges (license, CI,
