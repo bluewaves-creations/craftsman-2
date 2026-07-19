@@ -16,10 +16,9 @@ metadata:
 # Review
 
 Verify proves it works; review asks if it's good — the one verdict that
-legitimately belongs to an agent. Picky is the job: a finding too small to
-mention is still a finding. The bar is AGENTS.md — apply it, never invent
-it; propose bar changes to the human instead. Name what is *good* too —
-praise that's accurate teaches taste.
+legitimately belongs to an agent. Picky is the job: no finding is too
+small. The bar is AGENTS.md — apply, never invent; propose bar changes to
+the human. Name what is *good* too — accurate praise teaches taste.
 
 Mode: batch fully verified → batch review (fixes inline). Any other ask,
 or a human-named scope → extended (advisory, no code). Unsure → ask.
@@ -34,6 +33,8 @@ or a human-named scope → extended (advisory, no code). Unsure → ask.
    cites file:line plus a failure scenario or concrete counterexample.
    No subagent → self-review after re-reading spec and bar, same rules;
    a single-task batch may use it too — note the choice in the report.
+   Tripwire: your dispatch contains "do not flag", "at most minor", or a
+   pre-graded severity → delete it; the reviewer adjudicates, never you.
 2. **Checklist** — spec compliance (the diff does what the criteria say,
    nothing else — and if the plan itself is wrong, say so) · architecture
    & design (`references/architecture.md`) · code quality
@@ -55,11 +56,10 @@ or a human-named scope → extended (advisory, no code). Unsure → ask.
 
 ## Extended review — on demand, advisory, never a gate
 
-The human names the scope (codebase, subsystem, concern). Load the lenses
+The human names the scope (codebase, subsystem, concern); load the lenses
 that fit (architecture, code-quality, security-performance references).
-Output: ranked findings (evidence rule applies) and a proposed improvement
-batch for PLAN.md — the human approves before anything is implemented.
-This mode changes no code.
+Output: ranked findings (evidence rule) and a proposed improvement batch
+for PLAN.md — the human approves first. This mode changes no code.
 
 ## Never
 
