@@ -39,6 +39,8 @@ Budgets: AGENTS.md ≤ 100 lines · SKILL.md ≤ 70 · reference file ≤ 120.
 ## Gates
 Green means exit 0, evidence pasted.
 - Check: `scripts/check.sh` (structure, frontmatter, budgets, Flow↔skills)
+- CI: GitHub Actions `gates` (check + open-spec validator) on push/PR —
+  CI red blocks finish even on local green.
 
 ## Flow
 This repo is its own product — edits route through the same state table as

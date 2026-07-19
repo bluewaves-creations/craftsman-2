@@ -1,0 +1,20 @@
+name: gates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v8.3.2
+      - name: Structure gate
+        run: scripts/check.sh
+      - name: Open-spec validator (explicit — fails loud even if uvx vanishes from check.sh's path)
+        run: |
+          for d in skills/*/; do
+            uvx --from skills-ref agentskills validate "$d"
+          done
