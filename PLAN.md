@@ -4,10 +4,15 @@ Adapts at every batch boundary. The spec never moves: SPEC.md C1–C18
 (approved 2026-07-19), replacing the founding-brief proxy.
 
 ## State
-- In flight: batch 18 (release foundation) — go given 2026-07-19.
-  Batches 17 + 17b done; C13 ticked; stops now structural in plan skill.
-- Release ritual: after skill edits land here, re-sync `~/.agents/skills`
-  (18.2's installer makes it one command).
+- In flight: nothing — batch 18 done; C14/C16/C17 ticked. Next: batch 19
+  (README, CONTRIBUTING, v2.0.0) on human go, then → finish.
+- Release ritual: after skill edits land here, re-run
+  `scripts/install.sh` to re-sync `~/.agents/skills` (batch 18 made it
+  one command; no skill files changed in 18, so no sync owed).
+- Review 18 disposition: 7 findings fixed (symlink triage, license-drift
+  gate red-proven, edge FAILs, relative project link, structural usage,
+  nullglob, CI loop reports all); declined SHA-pinning actions — YAGNI,
+  tags on official actions, setup-uv releases immutable.
 - Pilot outcome: shipped 16/16 on PI, M3→GLM 5.2, $7.07, zero process
   steering — full report: docs/pilot-2026-07-19.md.
 - Standing decisions: pilot (C13) runs before public release so README

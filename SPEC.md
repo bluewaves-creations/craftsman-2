@@ -56,7 +56,7 @@ human validation. Verify ticks the boxes.
       overhead measured and reported.
 
 ## Open source release — replaces Craftsman v1
-- [ ] C14. LICENSE at the repo root matches the MIT declared in every
+- [x] C14. LICENSE at the repo root matches the MIT declared in every
       skill's frontmatter.
 - [ ] C15. README is the front door: hero + one-line promise, badges
       (license, gate CI, release), what-and-why, install command,
@@ -64,12 +64,12 @@ human validation. Verify ticks the boxes.
       lineage (v1 and superpowers — what changed and why), contributing
       and license sections. A newcomer routes their first task within
       5 minutes of reading only the README.
-- [ ] C16. One command installs the flow (nine skills + template) at
+- [x] C16. One command installs the flow (nine skills + template) at
       project or user level — bash only, no dependencies, idempotent;
       uninstall documented.
       - Edge: an existing AGENTS.md is never overwritten — install
         defers to craftsman-mode refresh.
-- [ ] C17. Public CI runs `scripts/check.sh` + the open-spec validator
+- [x] C17. Public CI runs `scripts/check.sh` + the open-spec validator
       on every push and PR; the README badge reflects it. Once named,
       CI red blocks finish (the flow's own CI gate row, activated).
 - [ ] C18. Contributor docs: CONTRIBUTING.md routes contributions
