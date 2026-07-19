@@ -25,10 +25,12 @@ Perpetual — bind on every edit. Activity rules live in the skills.
   before cutting examples.
 
 ## Conventions
-Skill descriptions state when, never what:
+Skill descriptions carry capability, triggers, and boundaries — never process:
 
 ```yaml
-description: Use when a task's implementation is complete — prove it with gate evidence
+description: >
+  Initialize the Craftsman flow in a project. Use when "init craftsman" or
+  AGENTS.md is missing at the start of work. Not for feature work (Flow table).
 ```
 
 Budgets: AGENTS.md ≤ 100 lines · SKILL.md ≤ 70 · reference file ≤ 120.

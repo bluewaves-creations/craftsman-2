@@ -2,6 +2,21 @@
 
 Read before re-litigating anything. Newest first.
 
+## 2026-07-19 — Skill descriptions: triggers and boundaries, never process
+Context: skills must be Agent Skills open-spec compliant (agentskills.io) and
+trigger precisely — no false positives, no skipped bodies.
+Decision: descriptions state the capability in one clause, then triggering
+contexts ("Use when …" with the phrases users actually say), then explicit
+non-triggers ("Not for … (use X)"). Never a summary of the skill's process —
+superpowers testing showed agents follow a process-bearing description as a
+shortcut and skip the skill body. Frontmatter uses only spec fields (name
+matching the directory, description ≤1024 chars, license, compatibility,
+metadata); the gate enforces name==dir and the presence of "Use when".
+Validation via `uvx --from skills-ref agentskills validate`.
+Rejected: when-only descriptions (the open spec expects what+when; capability
+naming is safe — it's process summaries that cause body-skipping); vendor
+frontmatter fields (breaks portability across harnesses).
+
 ## 2026-07-19 — Two-tier composable rules
 Context: fundamental rules (idiomatic-modern, DRY, YAGNI, clean comments)
 needed a home that guarantees they always bind without bloating every skill.
