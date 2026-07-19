@@ -23,7 +23,8 @@ Checklist:
 - **Conventions** — matches the AGENTS.md examples, not just their letter.
 
 Findings become an improvement loop: fix → verify → re-review until clean.
-Then re-plan the remaining batches and report to the human.
+Then "→ plan" (re-plan) closes the boundary: learnings folded, State
+extracted, compaction suggested, human decides what's next.
 
 ## Extended review (on demand)
 Wider lens across the whole codebase: pattern consistency, coupling trends,

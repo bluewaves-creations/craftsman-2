@@ -2,6 +2,21 @@
 
 Read before re-litigating anything. Newest first.
 
+## 2026-07-19 — Plans carry structure, not code
+Context: superpowers writes complete code into every plan step, targeting a
+zero-context executor with "questionable taste"; that model buys certainty
+at heavy token cost and the embedded code goes stale the moment execution
+deviates.
+Decision: PLAN.md locks what and where — C-ids, official doc per task,
+exact file paths, cross-task interface contracts, mechanical done-lines —
+never how. Code is written once, in implement, docs open. Boundary ritual
+borrowed from Craftsman v1: extract to a State section (only what disk and
+git cannot re-derive) and suggest compaction unconditionally at every
+boundary (v1 dogfood: the conditional suggestion never fired).
+Rejected: full code-in-plan (stale + token-heavy for a frontier executor
+with docs access); architecture essays in PLAN.md (rationale belongs in
+ADR.md, structure in the plan).
+
 ## 2026-07-19 — Skill descriptions: triggers and boundaries, never process
 Context: skills must be Agent Skills open-spec compliant (agentskills.io) and
 trigger precisely — no false positives, no skipped bodies.

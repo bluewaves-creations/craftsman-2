@@ -25,10 +25,15 @@ human validation. Verify ticks the boxes.
 # Plan — {Project}
 
 Adapts at every batch boundary. The spec never moves.
+Goal: {one sentence}
+Architecture: {2–3 sentences} · Constraints: {from the spec, exact values}
+
+## State
+{written at each boundary: decisions + why, failed approaches, open questions}
 
 ## Batch 1 — walking skeleton
-- [ ] 1.1 {Task} (C{n}). Doc: {source}. Done: {gate + demonstration}.
-- [ ] 1.2 {Task} (C{n}). Doc: {source}. Done: {gate + demonstration}.
+- [ ] 1.1 {Task} (C{n}). Doc: {source}. Files: {exact paths}.
+      Done: {gate command + observable demonstration}.
 
 ## Gaps
 - {claim no gate checks yet}
