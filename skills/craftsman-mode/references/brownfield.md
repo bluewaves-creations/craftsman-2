@@ -21,10 +21,11 @@ explicit — then it is a normal Craftsman project.
    - Conventions: sample real files — the code's dominant style wins over
      ideal style. A departure from that style becomes a rule only if the
      human wants the code moved there.
-   - Seed Rules: the universal four, then 2–4 stack rules from official
-     docs, checked against what the code actually does.
-   - Vision unclear — nobody can say what the project is for → brainstorm
-     skill, converge, resume.
+   - Seed Rules: the universal four (the comments rule adapts to the
+     project's medium), then 2–4 stack rules from official docs, checked
+     against what the code actually does.
+   - A slot you cannot fill without guessing → the brainstorm handoff in
+     the skill's shared rules.
 
 4. **Gates from reality.** Declare only commands that ran:
    - Green today → declare it.

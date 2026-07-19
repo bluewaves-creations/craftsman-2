@@ -20,13 +20,14 @@ immediately.
      server, docs/ folder, llms.txt). A library not listed later → stop and
      ask before coding against it.
 
-   Cannot fill Vision or Stack without guessing, or answers conflict →
-   brainstorm skill, converge, resume at the unfilled slot.
+   A slot you cannot fill without guessing → the brainstorm handoff in the
+   skill's shared rules.
 
 3. **Write the constitution** from `AGENTS.template.md`:
    - Every section from attested answers only.
-   - Seed Rules: the universal four verbatim, then 2–4 stack rules read from
-     the official docs — current idioms, one line each. Shape:
+   - Seed Rules: the universal four (the comments rule adapts to the
+     project's medium), then 2–4 stack rules read from the official docs —
+     current idioms, one line each. Shape:
      - Swift: actors over locks; async/await, never completion handlers.
      - React: server components by default; client only at interaction.
      - Python data: vectorize with polars/pandas; no row loops over frames.
@@ -52,8 +53,7 @@ immediately.
    evidence.
 
 7. **First commit.** `chore: bring project under craftsman`, listing the
-   created files. Announce the handoff: "→ specify" — or "→ brainstorm" if
-   the product direction is still open.
+   created files. Announce the handoff: "→ specify".
 
 ## Never
 - Fill a section the human didn't answer.

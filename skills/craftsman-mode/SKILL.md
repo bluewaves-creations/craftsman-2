@@ -1,8 +1,9 @@
 ---
 name: craftsman-mode
 description: >
-  Initialize the Craftsman flow in a project — greenfield or brownfield, any
-  stack: web, native apps, data, CLI. Use when the user says "init craftsman",
+  Initialize the Craftsman flow in a project or refresh its constitution —
+  greenfield or brownfield, any stack: web, native apps, data, CLI. Use when
+  the user says "init craftsman",
   "set up craftsman", "craftsman mode", "adopt / bring this codebase under
   craftsman", or when Craftsman work starts and AGENTS.md is missing or
   stale. Not for feature work in an initialized project (route by the Flow
@@ -23,31 +24,35 @@ routing into the Flow table.
 
 | Signal | Path | Load |
 |---|---|---|
-| Empty or near-empty repo | Greenfield | `references/greenfield.md` |
-| Existing code, no Craftsman constitution | Brownfield | `references/brownfield.md` |
-| AGENTS.md exists but stale or wrong | Refresh | below |
+| No source you would build or test | Greenfield | `references/greenfield.md` |
+| Existing code, no Craftsman constitution (a foreign AGENTS.md counts as none) | Brownfield | `references/brownfield.md` |
+| A Craftsman AGENTS.md exists, stale or wrong | Refresh | below |
 
 Refresh: re-observe (run the gates, sample the code), diff observed truth
 against AGENTS.md, propose the diff — never silently overwrite. Re-validate
-the seeded stack rules against current official docs.
+the seeded stack rules against current official docs. Done when the approved
+diff is applied and committed.
 
 ## Shared rules
 
 - **Observed, not inferred.** Every AGENTS.md line is a command you executed
   successfully or a fact the human attested. A missing section beats an
   invented one.
-- **Brainstorm on ambiguity.** If a template slot (Vision, Stack, Constraint)
-  cannot be filled without guessing, or answers conflict, invoke the
-  brainstorm skill, converge, then resume here at the unfilled slot.
+- **Brainstorm on ambiguity.** If any constitution slot (Vision, Stack,
+  Constraint) cannot be filled without guessing, or answers conflict, invoke
+  the brainstorm skill, converge, then resume here at the unfilled slot.
+  This rule is the single source for the handoff — the references defer to it.
 - **Confirm before writing.** List every file you will create or modify and
   get a yes. Not a git repo → offer `git init` first; the ledgers need git.
 - **Gates are the stack's own toolchain** — test, lint, types, build, or
   their stack equivalents. Declare only commands you ran; the loaded
   reference has a per-project-type table.
-- **Close the loop.** Init is done when one trivial test went red → green
-  through the declared gates. A bootstrap that never saw red proved nothing.
+- **Close the loop.** Greenfield and brownfield are done when one trivial
+  test went red → green through the declared gates. A bootstrap that never
+  saw red proved nothing. (Refresh's done-line is above.)
 
 ## Never
 - Let an inferred claim into AGENTS.md.
 - Declare a gate you haven't run on this machine.
-- Finish without the red→green proof and a first commit.
+- Finish greenfield or brownfield without the red→green proof and a first
+  commit.

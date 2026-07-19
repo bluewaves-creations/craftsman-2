@@ -17,8 +17,10 @@ for dir in skills/*/; do
   head -1 "$s" | grep -q '^---$' || err "$s missing frontmatter"
   base=$(basename "${dir%/}")
   grep -q "^name: $base\$" "$s" || err "$s frontmatter name must be '$base' (match directory)"
-  awk '/^---$/{c++; next} c==1' "$s" | grep -q 'Use when' \
-    || err "$s description must state triggers ('Use when …')"
+  [ "$(grep -c '^---$' "$s")" -ge 2 ] || err "$s frontmatter is not closed"
+  awk '/^---$/{c++; next} c==1' "$s" \
+    | awk '/^description:/{d=1; print; next} /^[a-zA-Z-]+:/{d=0} d' \
+    | grep -q 'Use when' || err "$s description must state triggers ('Use when …')"
   for ref in "${dir}references/"*.md; do
     [ -e "$ref" ] || continue
     rl=$(wc -l < "$ref" | tr -d ' ')
