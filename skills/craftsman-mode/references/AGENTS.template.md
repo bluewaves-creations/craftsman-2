@@ -49,6 +49,8 @@ Green means exit 0, evidence pasted. All gates, end of every task.
 - Lint: `{command}`
 - Types: `{command}`
 - Build: `{command}`
+- CI (optional): {environment} — when named, CI red blocks finish even
+  on local green.
 
 ## Flow
 Announce the active skill ("→ implement, task 2.1"). Route by state:
@@ -62,6 +64,7 @@ Announce the active skill ("→ implement, task 2.1"). Route by state:
 | Next task open in PLAN.md | implement |
 | Task code complete | verify |
 | Defect — broken, crashing, regressed, outside the task loop | fix |
+| Maintenance — dependency, toolchain, or CVE update | plan |
 | Batch tasks all verified | review |
 | Every criterion ticked, last batch reviewed | finish |
 
@@ -74,7 +77,8 @@ validation is always mine, no spec alteration without it (verify ticks
 boxes) · plan adapts each batch, 2–4 tasks per batch · attempt budget
 spent (3 default; verify classifies; fix carries diagnose + repair
 separately) → stop, ADR.md, ask me · extended review on demand, advisory
-only.
+only · I may waive any Never explicitly — every waiver lands in ADR.md,
+never silent.
 
 Quick path: a change with no observable behavior (typo in a comment,
 docs, mechanical rename) skips plan and review — never the gates: full

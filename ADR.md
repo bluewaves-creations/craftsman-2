@@ -2,6 +2,27 @@
 
 Read before re-litigating anything. Newest first.
 
+## 2026-07-19 — Boundary policies (holistic-review decisions)
+Context: the six-dimension extended review surfaced five undefined
+boundary behaviors; the human approved these postures.
+Decision:
+- Never-waiver: the human may waive any Never explicitly; every waiver is
+  recorded in ADR.md — sovereignty with a ledger, never silent.
+- Remote verdicts: AGENTS.md Gates may name a CI environment; when named,
+  CI red blocks finish even on local green.
+- Feature-scoped finish: the human may scope finish to a feature's C-id
+  range; the rest of the spec stays live.
+- Solo-batch review: a single-task batch may use review's self-review
+  form — checklist and improvement loop unchanged.
+- Maintenance lane: dependency/toolchain/CVE updates route to plan as an
+  improvement batch (Flow row); an actively exploited vulnerability is a
+  defect → fix.
+Rejected: silent human overrides (guts the gate guarantee); local-only
+verdicts in CI projects (ships red pipelines); all-or-nothing finish
+(blocks incremental delivery); mandatory subagent review for 1-task
+batches (ceremony over value); specify-shaped maintenance (criteria for
+"bump React" is make-work).
+
 ## 2026-07-19 — Trivial changes: the Quick Path
 Context: the flow needed a policy for tiny changes — does a typo fix pay
 the full spec→plan→implement→verify→review cycle?

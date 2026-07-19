@@ -44,7 +44,8 @@ This repo is its own product — edits route through the same state table as
 any project (see skills/craftsman-mode/references/AGENTS.template.md).
 Announce the active skill. Batches of 2–4 tasks · verify each task ·
 review each batch · attempt budget spent (3 default; verify classifies;
-fix carries diagnose + repair separately) → stop, ADR.md, ask me.
+fix carries diagnose + repair separately) → stop, ADR.md, ask me. I may waive any Never explicitly — every waiver
+lands in ADR.md, never silent.
 Quick path: a change with no observable behavior
 (observable = reaches a user, an API consumer, or a criterion; rendered
 copy is behavior, comments and docs are not) skips plan and review —

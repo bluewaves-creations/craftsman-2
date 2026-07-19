@@ -22,15 +22,19 @@ everything built gets proven, consolidated, documented, delivered.
 boundary commit since the last review → not finish; name what's open,
 route back. Every "Deferred — open questions" entry in SPEC.md: resolved
 via specify's post-freeze delta, or explicitly carried by the human.
+**Scope**: the human may name a feature's C-id range — preflight, QA
+walk, and delivery then apply to that range; the rest of the spec stays
+live.
 
 ## Method
 
 1. **Gaps triage** — every PLAN.md Gaps entry disposed, none silent:
    fix now (implement → verify loop), defer (ADR.md entry with the
    reason), or the human accepts it as-is.
-2. **Full QA** — every gate, full scope, fresh, on the final tree —
-   verify's evidence rules and per-failure budgets apply. Walk SPEC.md:
-   each C-id's demonstration re-confirmed. Budget spent → stop, report.
+2. **Full QA** — every gate, full scope, fresh, on the final tree — and
+   a Gates-named CI environment green too. Verify's evidence rules and
+   per-failure budgets apply. Walk SPEC.md: each C-id's demonstration
+   re-confirmed. Budget spent → stop, report.
 3. **Improvement pass** — offer an extended review (advisory). Accepted
    findings become one final improvement batch (plan adds it), returning
    here through the normal implement → verify → review → plan loop.
