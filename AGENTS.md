@@ -44,7 +44,9 @@ This repo is its own product — edits route through the same state table as
 any project (see skills/craftsman-mode/references/AGENTS.template.md).
 Announce the active skill. Batches of 2–4 tasks · verify each task ·
 review each batch · attempt budget spent (3 default; verify classifies)
-→ stop, ADR.md, ask me.
+→ stop, ADR.md, ask me. Quick path: a change with no observable behavior
+skips plan and review — never the gates: full gates, evidence, one typed
+commit; the moment behavior appears, route by the Flow table.
 
 ## Ledgers
 | Artifact | Records | Written by |

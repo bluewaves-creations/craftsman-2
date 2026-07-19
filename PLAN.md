@@ -177,6 +177,7 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
   Flow row, implement blocked-by-bug route).
 - No mechanical link yet between template promises and skills that exist
   (1.4 closes part of it).
-- No trivial-change policy: does a typo fix pay the full flow?
+- ~~No trivial-change policy~~ — closed: the Quick Path (standing-contract
+  clause + ADR 2026-07-19); behavior-based routing, gates never skipped.
 - ~~Extended review has no on-demand lenses~~ — closed by batch 8
   (architecture, code-quality, security-performance references).

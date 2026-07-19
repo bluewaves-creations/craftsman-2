@@ -2,6 +2,24 @@
 
 Read before re-litigating anything. Newest first.
 
+## 2026-07-19 — Trivial changes: the Quick Path
+Context: the flow needed a policy for tiny changes — does a typo fix pay
+the full spec→plan→implement→verify→review cycle?
+Decision: route by observable behavior, never by size. No observable
+behavior change (typo, comment, docs, mechanical rename) → quick path:
+skips plan and review, never the gates — full gates, fresh evidence, one
+typed commit. Behavior the spec covers → specify's post-freeze delta (no
+size exemption to the freeze). Uncovered behavior → specify. Broken →
+fix. Tripwires: test assertions must stay untouched (else it wasn't
+trivial), and the moment a quick change grows behavior it enters the
+flow — no "while I'm here". Lives as a standing-contract clause, not a
+skill: a routing rule must be always-resident, and the Flow table's rows
+are mechanically bound to skills/.
+Rejected: full ceremony for everything (superpowers' stance — kills
+speed); a tenth quick skill (a routing rule behind a trigger is
+circular); size-based judgment (self-assessment of "smallness" is
+exactly what we don't trust — behavior-based routing is checkable).
+
 ## 2026-07-19 — Commit discipline: feat + separate refactor commits per task
 Context: v0 said "one task, one commit", but refactor-while-green is a
 duty and mixing it with behavior makes the ledger undiagnosable.

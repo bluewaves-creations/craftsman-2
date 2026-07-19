@@ -71,6 +71,11 @@ boxes) · plan adapts each batch, 2–4 tasks per batch · attempt budget
 spent (3 default; verify classifies) → stop, ADR.md, ask me · extended
 review on demand, advisory only.
 
+Quick path: a change with no observable behavior (typo, comment, docs,
+mechanical rename) skips plan and review — never the gates: full gates,
+evidence, one typed commit. Test assertions stay untouched; the moment
+behavior appears, route by the Flow table.
+
 ## Ledgers
 | Artifact | Records | Written by |
 |---|---|---|
