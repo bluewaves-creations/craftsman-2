@@ -39,7 +39,7 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       never process) in ADR.md; update the AGENTS.md convention example.
 
 ## Batch 3 — brainstorm best-in-class
-- [ ] 3.1 Rework brainstorm SKILL.md: open-spec frontmatter (triggers:
+- [x] 3.1 Rework brainstorm SKILL.md: open-spec frontmatter (triggers:
       inception, complex/fuzzy/ambiguous work, on request; non-triggers),
       bold personality, dream-big → ground → converge arc with docs-grounded
       feasibility, riskiest-assumption kill test, timeboxed spikes, explicit
@@ -47,9 +47,9 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       superpowers brainstorming (one question at a time, decompose-first,
       approaches + recommendation), double diamond & continuous discovery,
       Apple think-different filters.
-- [ ] 3.2 references/techniques.md: reframing, divergence, taste-filter, and
+- [x] 3.2 references/techniques.md: reframing, divergence, taste-filter, and
       grounding toolkit — micro-example each, loaded on demand.
-- [ ] 3.3 Align the brainstorm trigger language in AGENTS.template.md Flow
+- [x] 3.3 Align the brainstorm trigger language in AGENTS.template.md Flow
       table; gate + open-spec validator green.
 
 ## Later batches (draft)
