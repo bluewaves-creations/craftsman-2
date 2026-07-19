@@ -28,37 +28,38 @@ Perpetual — bind on every line, every phase. Activity rules live in the skills
   locks; async/await, never completion handlers"}
 - {Stack rule}
 
+## Conventions
+One example each — match the shape. {grows as the code teaches}
+
+{Convention name}:
+```{lang}
+{minimal example of the right way}
+```
+
+{Convention name}:
+```{lang}
+{minimal example of the right way}
+```
+
 ## Gates
-Green means exit 0, evidence pasted. Run by verify at the end of every task.
+Green means exit 0, evidence pasted. All gates, end of every task.
 - Test: `{command}`
 - Lint: `{command}`
 - Types: `{command}`
 - Build: `{command}`
 
-## Conventions
-One example each — match the shape.
+## Flow
+Announce the active skill ("→ implement, task 2.1"). Route by state:
 
-{Convention name}:
-```{lang}
-{minimal example of the right way}
-```
+| State | Skill |
+|---|---|
+| Direction unclear — new project or pivot | brainstorm |
+| Work described, no acceptance criteria | specify |
+| Spec approved · batch boundary passed | plan |
+| Next task open in PLAN.md | implement |
+| Task code complete | verify |
+| Batch tasks all verified | review |
+| Every criterion ticked | finish |
 
-{Convention name}:
-```{lang}
-{minimal example of the right way}
-```
-
-## Workflow
-Artifacts: SPEC.md (frozen — only I edit words; verify ticks boxes) ·
-PLAN.md (adapts each batch) · ADR.md (decision ledger) · git log (one task,
-one commit).
-
-- **brainstorm** — on demand: new direction or pivot, not routine batches.
-- **specify** — acceptance criteria with edge cases; frozen at approval.
-- **plan** — batches of 2–4 tasks, each citing its official doc.
-- **implement** — ground in docs → failing test → minimal green → refactor →
-  commit. Three failed attempts: stop, ADR.md, ask me.
-- **verify** — end of every task: all gates, pasted evidence, gap pass.
-- **review** — end of every batch: fresh-eyes checklist + improvement loop.
-  Extended review on demand.
-- **finish** — full QA, ADR consolidation, docs, ship.
+Fresh session: read SPEC.md, PLAN.md current batch, ADR.md, `git log -5` —
+then route by state.
