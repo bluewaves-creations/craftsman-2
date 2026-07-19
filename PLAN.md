@@ -40,19 +40,19 @@ Adapts at every batch boundary. The spec never moves: SPEC.md C1–C18
 
 ## Batch 17 — greenfield pilot (C13) — human plays product owner
 Runs in ~/Developer/craftsman-pilot (empty, confirmed).
-- [x] 17.1 Seed the flow into the pilot by hand — the manual steps become
-      the install script's discovery input. Done: nine skills copied to
-      pilot .claude/skills/, diff -r identical, validator green ×9.
-      Discovery for 18.2: install = copy nine dirs into `.agents/skills/`
-      (open-standard, harness-agnostic) + symlink `.claude/skills →
-      ../.agents/skills` for Claude Code discovery (docs: only .claude
-      paths are native; symlinks followed — verified on this machine,
-      user level mirrors it: ~/.claude/skills → ~/.agents/skills).
-      Nothing else; AGENTS.md and ledgers belong to craftsman-mode init,
-      so the installer never touches them (C16 edge by construction).
-      Idempotent by re-copy; respect an existing .claude/skills real dir
-      (copy into it instead of symlinking). Verify = diff -r; validator
-      optional (needs uvx).
+- [x] 17.1 Seed the flow by hand — the manual steps become the install
+      script's discovery input. Done: nine skills installed at user
+      level, diff -r identical ×9, validator green ×9; pilot folder
+      left empty (constitution and ledgers are craftsman-mode's job).
+      Discovery for 18.2: default install is user level for all agents —
+      copy nine dirs into `~/.agents/skills/` (open-standard store) +
+      ensure symlink `~/.claude/skills → ~/.agents/skills` (docs: only
+      .claude paths are native discovery; symlinks followed — verified
+      on this machine). Project level (`.agents/skills/` + local
+      symlink) is the flag, same shape. Installer never touches
+      AGENTS.md or ledgers (C16 edge by construction). Idempotent by
+      re-copy; an existing real `.claude/skills` dir → copy into it,
+      never symlink over. Verify = diff -r; validator optional (uvx).
 - [ ] 17.2 Run the flow end to end — auto-routing only, no skill named
       manually; record per-phase token overhead as it runs.
 - [ ] 17.3 Pilot report: measurements, friction → proposed improvement
