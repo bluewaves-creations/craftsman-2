@@ -2,6 +2,19 @@
 
 Read before re-litigating anything. Newest first.
 
+## 2026-07-19 — Pilot evidence lands on the deferred hook question
+Context: the greenfield pilot (PI + GLM 5.2, docs/pilot-2026-07-19.md)
+is the measurement the hook deferral was waiting for.
+Data: zero gate rationalization in 407 turns — every red was fixed, no
+"basically green". What a mid-tier model *did* skip: procedural stops —
+the boundary go (4×) and the compaction proposal (5×), both explicit in
+the plan skill. Discipline about verdicts held; discipline about
+pausing didn't.
+Reading: the case for a commit-blocking hook (verdict enforcement) got
+weaker; the case for making stops structural rather than listed
+(batch 17b.2–17b.4) got stronger. Hook stays deferred — human ruling
+still open.
+
 ## 2026-07-19 — Ancestor gap closure; commit-hook backstop deferred
 Context: a fresh-eyes sweep of Craftsman v1 and superpowers checked what
 the successor silently lost. Five gaps confirmed absent from the text

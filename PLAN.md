@@ -70,10 +70,21 @@ Runs in ~/Developer/craftsman-pilot (empty, confirmed).
       AGENTS.md ≤100 lines before committing it (pilot wrote 161,
       blowing C10's always-on bound); check.sh pins the template ≤100
       as rendered constitution (closes the open Gap below).
-- [ ] 17b.2 fix skill: ledger the defect (PLAN State) as step one,
-      before diagnosis — pilot lost an open defect to a stream drop
-      ("Continue" resumed the wrong thread); C9 doctrine applied to
-      mid-session interruption.
+- [ ] 17b.2 plan skill: Initial mode gains a human validation stop —
+      present the plan, wait for the go, only then "→ implement, task
+      1.1" (pilot launched implementation unvalidated; the skill as
+      written told it to — only Re-plan had a Wait).
+- [ ] 17b.3 plan skill: boundary go made skip-resistant — Re-plan's
+      only exit is report + wait for the human's go (pilot crossed
+      four boundaries without it despite the Never; distinct from
+      compaction).
+- [ ] 17b.4 plan skill: compaction proposal at every successful batch
+      boundary made part of the boundary report's fixed shape (pilot:
+      zero proposals in five boundaries; context hygiene, distinct
+      from the go).
+- Struck: fix-skill ledger-defect-first — evidence withdrawn (white
+  screen was a human-side mistake; the interruption/branch was manual,
+  not thread loss; fix routed and diagnosed correctly).
 
 ## Batch 18 — release foundation
 - [ ] 18.1 LICENSE: MIT at root, matching skill frontmatter (C14).
