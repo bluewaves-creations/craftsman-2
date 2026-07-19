@@ -2,6 +2,22 @@
 
 Read before re-litigating anything. Newest first.
 
+## 2026-07-19 — Ancestor gap closure; commit-hook backstop deferred
+Context: a fresh-eyes sweep of Craftsman v1 and superpowers checked what
+the successor silently lost. Five gaps confirmed absent from the text
+and approved as batch 15 (red-flags table, install-time dependency
+vetting, plan pre-action gate, review anti-pre-judging tripwire,
+docs-are-data guard).
+Deferred — no human ruling yet: v1's mechanical enforcement (PreToolUse
+hook blocking `git commit` on red gates). It would convert our weakest
+instruction back into a guarantee, but bends "guide and show" and is
+harness-specific. Revisit after the greenfield pilot measures how often
+instruction-only gates get rationalized away.
+Rejected as YAGNI (per our own rule): baseline/ratchet machinery,
+boundary-distance telemetry, worktree/parallel orchestration, model
+tiering, brainstorm visual companion, defense-in-depth repairs (tension
+with minimal-repair — revisit on repeat escapes in a pilot).
+
 ## 2026-07-19 — Boundary policies (holistic-review decisions)
 Context: the six-dimension extended review surfaced five undefined
 boundary behaviors; the human approved these postures.

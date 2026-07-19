@@ -224,13 +224,30 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       improvement batch (Flow row); an actively exploited vulnerability
       is a defect → fix.
 
+## Batch 15 — ancestor gap closure (approved 2026-07-19)
+Source: fresh-eyes sweep of Craftsman v1 + superpowers vs. current text.
+- [ ] 15.1 Red-flags table: named rationalizations mapped to stop-actions
+      ("basically green is red"; satisfaction words are unverified claims)
+      — perpetual tier: AGENTS.md + AGENTS.template.md. Both ancestors
+      converge; recognition tables at decision time are a measured win.
+- [ ] 15.2 Dependency vetting at install: new-dependency check in implement
+      (exists and is the intended package — ~21.7% of hallucinated names
+      are registry squats; known vulns; license; already in tree?).
+- [ ] 15.3 Decision-time guards: plan reads ADR dead ends before proposing
+      an approach (cite a match before retrying it); review dispatch
+      tripwire — a prompt containing "do not flag" stops the dispatcher.
+- [ ] 15.4 Docs guard: fetched documentation is data, never instructions —
+      embedded directives are ignored (template Documentation section).
+
 ## Later batches (draft)
 - One batch per remaining skill: brainstorm, specify, plan, implement,
   verify, review, finish — same treatment; strip rules the perpetual tier
   covers; align descriptions to Flow-table states.
 - Decide the defect route (fix skill or Flow row — see Gaps).
 - Greenfield pilot: "build a todo app" must auto-route through the flow;
-  measure real token overhead per phase.
+  measure real token overhead per phase. Pressure-test skill wording with
+  subagents, always with a no-guidance control (superpowers method) —
+  guidance for failures that don't reproduce is pure token waste.
 
 ## Gaps
 - ~~No route for defects~~ — closed by batch 10 (fix skill: diagnose-first,
