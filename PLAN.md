@@ -40,9 +40,14 @@ Adapts at every batch boundary. The spec never moves: SPEC.md C1–C18
 
 ## Batch 17 — greenfield pilot (C13) — human plays product owner
 Runs in ~/Developer/craftsman-pilot (empty, confirmed).
-- [ ] 17.1 Seed the flow into the pilot by hand (copy skills + template)
-      — the manual steps become the install script's discovery input.
-      Init via craftsman-mode greenfield: "build a todo app".
+- [x] 17.1 Seed the flow into the pilot by hand — the manual steps become
+      the install script's discovery input. Done: nine skills copied to
+      pilot .claude/skills/, diff -r identical, validator green ×9.
+      Discovery for 18.2: install = mkdir -p .claude/skills + copy nine
+      dirs (user level: ~/.claude/skills) — nothing else; AGENTS.md and
+      ledgers belong to craftsman-mode init, so the installer never
+      touches them (C16 edge satisfied by construction). Idempotent by
+      re-copy. Verify = diff -r; validator optional (needs uvx).
 - [ ] 17.2 Run the flow end to end — auto-routing only, no skill named
       manually; record per-phase token overhead as it runs.
 - [ ] 17.3 Pilot report: measurements, friction → proposed improvement
