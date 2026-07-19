@@ -65,7 +65,7 @@ ADR.md, `git log -5` — then route by state. Uncommitted changes → an
 interrupted task; its failing test names the spot — finish it first.
 
 Standing contract: spec frozen at approval — the agent drafts and refines,
-validation is always mine, no alteration without it (verify ticks boxes) ·
+validation is always mine, no spec alteration without it (verify ticks boxes) ·
 plan adapts each batch, 2–4 tasks · attempt budget spent (3 default;
 verify classifies; fix carries diagnose + repair separately) → stop,
 ADR.md, ask me · extended review on demand, advisory only · I may waive
@@ -74,8 +74,8 @@ any Never explicitly — every waiver lands in ADR.md, never silent.
 Quick path: a change with no observable behavior (comment typo, docs,
 mechanical rename) skips plan and review — never the gates: full gates,
 evidence, one typed commit. Observable = reaches a user, an API consumer,
-or a criterion; rendered copy is behavior, comments and docs are not;
-test assertions stay untouched. Behavior appearing → route by the Flow
+or a criterion; rendered copy is behavior — comments, docs, and internal
+names are not; test assertions stay untouched. Behavior appearing → Flow
 table. Dep/toolchain bumps never qualify — behavior-neutrality isn't
 eyeball-checkable; route via Maintenance.
 

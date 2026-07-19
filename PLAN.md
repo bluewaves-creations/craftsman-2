@@ -31,7 +31,7 @@ Adapts at every batch boundary. The spec never moves: SPEC.md C1–C18
 ## Batch 16 — spec seating + ledger hygiene
 - [x] 16.1 Verify pass over C1–C12: fresh evidence per criterion — tick
       each box in SPEC.md. Done: check.sh + validator green ×9; template
-      golfed 111→99 (C1 red caught); always-on ≈1849 tokens ≤ 2k (C10).
+      golfed 110→99 (C1 red caught); always-on ≈1849 tokens ≤ 2k (C10).
       (75e3e0b)
 - [x] 16.2 PLAN fold: batches 1–15 compressed to one line each (title +
       closing commit); stale Gaps/draft entries struck with citations;
@@ -74,7 +74,10 @@ Then → finish: every criterion ticked, full QA, delivery.
 ## Gaps
 - check.sh caps the template at 120 (reference budget) but nothing
   mechanically holds it ≤100 as a *rendered constitution* (C1) — caught
-  by hand in verify 16.1 at 111 lines; a check.sh line would pin it.
+  by hand in verify 16.1 at 110 lines; a check.sh line would pin it.
+- Template's merged "Lint / Types" gate slot trades a granularity cue
+  for the ≤100 budget — accepted (review 16 minor): greenfield.md's
+  gate table carries the multi-command rows an init actually writes.
 - ~~No route for defects~~ — closed by batch 10 (fix skill).
 - ~~No mechanical link between template promises and skills~~ — closed
   by 1.4 (forward) + 12.4 (reverse binding, readlink, validator).
