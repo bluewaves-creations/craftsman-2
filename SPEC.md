@@ -5,48 +5,48 @@ Frozen at approval. The agent drafts and refines; every alteration needs
 human validation. Verify ticks the boxes.
 
 ## Constitution
-- [ ] C1. A project adopting the flow gets an AGENTS.md ≤100 lines —
+- [x] C1. A project adopting the flow gets an AGENTS.md ≤100 lines —
       Vision, Stack, Documentation, Rules, Conventions, Gates, Flow,
       Red flags, Ledgers — sufficient to route any turn without another
       always-on file.
-- [ ] C2. Rules live in exactly two composable tiers: perpetual in
+- [x] C2. Rules live in exactly two composable tiers: perpetual in
       AGENTS.md (universal seed + stack rules at init), activity rules in
       the owning skill — no rule duplicated across tiers.
 
 ## Skills
-- [ ] C3. Nine skills cover the lifecycle (craftsman-mode, brainstorm,
+- [x] C3. Nine skills cover the lifecycle (craftsman-mode, brainstorm,
       specify, plan, implement, verify, fix, review, finish): each
       SKILL.md ≤70 lines, references ≤120, Agent Skills open-spec valid.
       - Edge: no subagent-capable harness → every skill still executes
         (degraded forms declared in-skill).
-- [ ] C4. Flow table ↔ skills bind both ways: every row names an existing
+- [x] C4. Flow table ↔ skills bind both ways: every row names an existing
       skill, every skill is reachable from a row — mechanically checked.
-- [ ] C5. Every description carries capability + triggers + boundaries,
+- [x] C5. Every description carries capability + triggers + boundaries,
       never process, with a literal "Use when" — mechanically checked.
 
 ## Verdicts
-- [ ] C6. Green means exit 0 with pasted evidence, fresh after the last
+- [x] C6. Green means exit 0 with pasted evidence, fresh after the last
       change; no claim of done/fixed/passing rests on self-assessment.
-- [ ] C7. Spec sovereignty: the agent drafts and refines, validation is
+- [x] C7. Spec sovereignty: the agent drafts and refines, validation is
       always human; frozen at approval; changes land as human-approved
       ADDED / MODIFIED / REMOVED deltas with stable C-ids.
-- [ ] C8. Every red loop is budget-bounded (3 default; verify classifies
+- [x] C8. Every red loop is budget-bounded (3 default; verify classifies
       — regression 2, environment 1; fix carries diagnose 3 + repair 3);
       a spent budget stops work → ADR.md entry + human decision.
-- [ ] C9. Work survives compaction: boundaries extract non-derivable
+- [x] C9. Work survives compaction: boundaries extract non-derivable
       State to PLAN.md; a fresh session re-enters via SPEC + PLAN State +
       ADR + git log and lands at the interrupted spot.
       - Edge: uncommitted changes → the failing test names the spot.
 
 ## Efficiency
-- [ ] C10. Always-on context (constitution + nine skill descriptions)
+- [x] C10. Always-on context (constitution + nine skill descriptions)
       stays ≤ 2k tokens, measured — under half of Craftsman v1's.
-- [ ] C11. A change with no observable behavior takes the quick path:
+- [x] C11. A change with no observable behavior takes the quick path:
       full gates + one typed commit, no plan or review ceremony.
       - Edge: dependency/toolchain bumps never qualify → Maintenance.
 
 ## Composition
-- [ ] C12. Vendor skills compose with declared precedence: on Apple
+- [x] C12. Vendor skills compose with declared precedence: on Apple
       projects, init exports Xcode's skills and records that they own
       platform idiom over generic guidance.
 

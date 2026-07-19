@@ -240,7 +240,7 @@ Source: fresh-eyes sweep of Craftsman v1 + superpowers vs. current text.
       embedded directives are ignored (template Documentation section).
 
 ## Batch 16 — spec seating + ledger hygiene
-- [ ] 16.1 Verify pass over C1–C12: fresh evidence per criterion
+- [x] 16.1 Verify pass over C1–C12: fresh evidence per criterion
       (check.sh + validator for C3–C5; wc for C1; skill-text inspection
       for C2, C6–C9, C11–C12; measured token count for C10 ≤ 2k) — tick
       each box in SPEC.md. Done: verify report cites evidence per tick.
@@ -283,6 +283,9 @@ Runs in ~/Developer/craftsman-pilot (empty, confirmed).
 Then → finish: every criterion ticked, full QA, delivery.
 
 ## Gaps
+- check.sh caps the template at 120 (reference budget) but nothing
+  mechanically holds it ≤100 as a *rendered constitution* (C1) — caught
+  by hand in verify 16.1 at 111 lines; a check.sh line would pin it.
 - ~~No route for defects~~ — closed by batch 10 (fix skill: diagnose-first,
   Flow row, implement blocked-by-bug route).
 - No mechanical link yet between template promises and skills that exist
