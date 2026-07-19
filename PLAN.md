@@ -177,50 +177,50 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       approval — extended review changes no code).
 
 ## Batch 12 — correctness (approved)
-- 12.1 Plan gains a fourth mode, "Mid-flight intake": seats spec deltas,
+- [x] 12.1 Plan gains a fourth mode, "Mid-flight intake": seats spec deltas,
       architecture-blocked, stale-plan, execution-fog handoffs; specify's
       After-the-freeze gains its missing exit hop "→ plan (mid-flight)".
-- 12.2 Budget coherence: implement's regression row defers to verify's
+- [x] 12.2 Budget coherence: implement's regression row defers to verify's
       class budgets (2, not 3); fix's 3+3 signaled in the standing
       contract; in-flight budget tally recorded in PLAN State on any
       boundary/compaction so it survives fresh sessions.
-- 12.3 Quick-path precision: define observable ("reaches a user, an API
+- [x] 12.3 Quick-path precision: define observable ("reaches a user, an API
       consumer, or a criterion — rendered copy is behavior; comments,
       docs, internal names are not"); mid-task compaction breadcrumb
       (fresh-session row: uncommitted changes → the failing test names
       the interrupted spot).
-- 12.4 Gate hardening: check.sh verifies symlink target (readlink),
+- [x] 12.4 Gate hardening: check.sh verifies symlink target (readlink),
       description ≤1024, reverse Flow binding (every skill except
       craftsman-mode in a Flow row), wires agentskills validate when
       available.
-- 12.5 Polish sweep: finish description de-processed; plan drops "where
+- [x] 12.5 Polish sweep: finish description de-processed; plan drops "where
       were we"; new-project entry clarified (craftsman-mode orchestrates
       brainstorm); fix boundary sentence for in-loop reds; ledger rows
       complete (specify/finish/init commits); PLAN goals citation fixed;
       frontmatter versions unified.
 
 ## Batch 13 — Apple / Xcode 27 composition (approved)
-- 13.1 craftsman-mode: Apple-project probe — export Apple's skills
+- [x] 13.1 craftsman-mode: Apple-project probe — export Apple's skills
       (xcrun agent skills export), register Xcode MCP / Apple docs as
       Documentation source, record the delegation in AGENTS.md.
-- 13.2 Precedence statement (review checklist + template Rules): Apple's
+- [x] 13.2 Precedence statement (review checklist + template Rules): Apple's
       exported skills own SwiftUI/testing idiom on Apple platforms.
-- 13.3 Native-app gate row corrected (xcodebuild test / swift test ·
+- [x] 13.3 Native-app gate row corrected (xcodebuild test / swift test ·
       swiftlint · xcodebuild build; xcresult as evidence); Swift rule
       example refreshed (Approachable Concurrency, @Observable, Swift
       Testing).
 
 ## Batch 14 — boundary policies (recommendations approved 2026-07-19)
-- 14.1 Never-waiver: the human may waive any Never explicitly; every
+- [x] 14.1 Never-waiver: the human may waive any Never explicitly; every
       waiver recorded in ADR.md — sovereignty with a ledger, never
       silent. Standing-contract clause + ADR entry.
-- 14.2 Remote verdicts: AGENTS.md Gates may name CI as the authoritative
+- [x] 14.2 Remote verdicts: AGENTS.md Gates may name CI as the authoritative
       environment; when named, CI red blocks finish even on local green.
-- 14.3 Feature-scoped finish: the human may scope finish to a feature's
+- [x] 14.3 Feature-scoped finish: the human may scope finish to a feature's
       C-id range; preflight, QA walk, and delivery apply to that range.
-- 14.4 Speed relief: a single-task batch may use review's self-review
+- [x] 14.4 Speed relief: a single-task batch may use review's self-review
       form — checklist and improvement loop unchanged.
-- 14.5 Maintenance lane: dep/toolchain/CVE updates route to plan as an
+- [x] 14.5 Maintenance lane: dep/toolchain/CVE updates route to plan as an
       improvement batch (Flow row); an actively exploited vulnerability
       is a defect → fix.
 
