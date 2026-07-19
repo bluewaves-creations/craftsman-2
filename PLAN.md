@@ -4,8 +4,8 @@ Adapts at every batch boundary. The spec never moves: SPEC.md C1–C18
 (approved 2026-07-19), replacing the founding-brief proxy.
 
 ## State
-- In flight: nothing — batch 18 done; C14/C16/C17 ticked. Next: batch 19
-  (README, CONTRIBUTING, v2.0.0) on human go, then → finish.
+- In flight: batch 19 (front door + ship) — go given 2026-07-19. After
+  it: → finish. Batch 18 done; C14/C16/C17 ticked.
 - Release ritual: after skill edits land here, re-run
   `scripts/install.sh` to re-sync `~/.agents/skills` (batch 18 made it
   one command; no skill files changed in 18, so no sync owed).
