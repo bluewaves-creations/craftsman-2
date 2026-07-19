@@ -2,6 +2,15 @@
 
 Read before re-litigating anything. Newest first.
 
+## 2026-07-19 — Commit discipline: feat + separate refactor commits per task
+Context: v0 said "one task, one commit", but refactor-while-green is a
+duty and mixing it with behavior makes the ledger undiagnosable.
+Decision: a task lands as one feat commit (the behavior, [C-id] tagged)
+plus zero or more refactor(scope) commits — never mixed. The Ledgers row
+stays "implement per task; plan per boundary".
+Rejected: single squashed commit per task (hides which change moved
+behavior); free-form commits (loses the task↔C-id narrative).
+
 ## 2026-07-19 — Plans carry structure, not code
 Context: superpowers writes complete code into every plan step, targeting a
 zero-context executor with "questionable taste"; that model buys certainty
