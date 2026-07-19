@@ -53,18 +53,18 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       table; gate + open-spec validator green.
 
 ## Batch 4 — specify best-in-class
-- [ ] 4.1 Rework specify SKILL.md: open-spec frontmatter; librarian stance
+- [x] 4.1 Rework specify SKILL.md: open-spec frontmatter; librarian stance
       (docs at spec time — no source, no criterion); intake from brainstorm
       brief (seamless seam) or direct ask; example-mapping interview with
       stop conditions; self-review pass (placeholders, consistency,
       two-readings ambiguity, scope); approval freezes; post-freeze deltas
       as ADDED/MODIFIED/REMOVED with human-approved exact wording; numbered
       stable criteria IDs (C1…) for the plan handover.
-- [ ] 4.2 references/example-mapping.md (v1 adaptation, map → criteria) and
+- [x] 4.2 references/example-mapping.md (v1 adaptation, map → criteria) and
       references/criteria-authoring.md (anatomy, declarative-not-mechanics,
       concrete values, edge-case taxonomy, anti-pattern table with good/bad
       examples).
-- [ ] 4.3 Align templates.md SPEC skeleton (C-ids, Deferred — open questions
+- [x] 4.3 Align templates.md SPEC skeleton (C-ids, Deferred — open questions
       section) and PLAN done-line citation; gate + validator green.
 
 ## Later batches (draft)
