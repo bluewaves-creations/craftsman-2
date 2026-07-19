@@ -2,15 +2,15 @@
 name: brainstorm
 description: >
   Open a creative design space and converge on a bold, feasible direction.
-  Use when a project begins, when work turns complex, fuzzy, or ambiguous
-  (conflicting goals, pivot pressure, no clear direction), or when the user
-  asks to brainstorm, explore ideas, or "think different". Not for routine
-  work under an approved spec (plan) and not for writing acceptance criteria
-  (specify).
+  Use when a project begins, when a significant pivot is on the table, when
+  work turns complex, fuzzy, or ambiguous (conflicting goals, no clear
+  direction), or when the user asks to brainstorm, explore ideas, or "think
+  different". Not for routine work under an approved spec (plan) and not for
+  writing acceptance criteria (specify).
 license: MIT
 compatibility: Best with official-docs access (MCP servers or docs/) for feasibility grounding.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Brainstorm
@@ -19,36 +19,40 @@ A creative space, not a decision tree. Personality: bold — challenge the
 default, aim for the category's best, say so plainly. Throughline:
 **dream big → build perfect → prove it feasible.**
 
-Dialogue: one question per message; offer choices when they sharpen
-thinking; an ask spanning several independent subsystems → decompose first,
-then brainstorm the first piece.
+Practice, d.school current form: bias toward action — a small experiment
+beats a long debate; move between concrete and abstract; show, don't tell;
+navigate ambiguity instead of rushing to close it. One question per
+message; choices when they sharpen thinking; an ask spanning several
+independent subsystems → decompose first, brainstorm the first piece.
 
-## Arc — move through these; linger where the energy is
+## Arc — non-linear; revisit phases as learning arrives
 
-1. **Reframe** — restate the problem from the user's world; strip it to
-   first principles. Ask "how might we…" until the frame that changes the
-   answer appears. The ask is rarely the need.
+1. **Reframe** — restate the problem from the user's world; strip to first
+   principles; "how might we…" until a frame changes the answer. Done when
+   the frame is agreed. The ask is rarely the need.
 2. **Dream** — diverge before judging: 3+ genuinely different directions,
-   at least one dropping an assumption everyone keeps. Quantity first,
-   critique later. Samey or stuck → `references/techniques.md`.
+   at least one dropping an assumption everyone keeps. Samey or stuck →
+   `references/techniques.md`.
 3. **Ground** — research what the platform makes newly possible (official
-   docs, MCPs): great directions sit where desirable meets newly possible.
-   Kill or keep by the riskiest assumption; when docs can't answer it,
-   offer a timeboxed spike.
+   docs, MCPs). Done when each surviving direction's riskiest assumption
+   has a verdict — from the docs, or a spike (human sets the timebox;
+   default one focused hour).
 4. **Converge** — judge with taste: unique? craftable to perfection?
    feasibility proven? Recommend one and say why; name what you are
-   deliberately not building — saying no is the craft.
+   deliberately not building. Done when the human picks.
 5. **Handoff** — direction brief, 5–10 lines: direction, who it serves,
-   what perfect looks like, sacrifices, risks. Decision + rejected
-   directions → ADR.md (rejections are tomorrow's shortcuts).
+   what perfect looks like, sacrifices, risks — written so specify can turn
+   each line into acceptance criteria. Decision + rejected directions →
+   ADR.md (create it if inception hasn't yet).
 
 ## Exits — announce the handoff
 
 | Context | Exit |
 |---|---|
-| Project inception (from craftsman-mode) | Vision approved by human → resume craftsman-mode |
-| New feature or pivot | brief feeds "→ specify" |
-| Mid-flight fog or spec contradiction | human rules on the spec → "→ plan" |
+| Project inception (from craftsman-mode) | Vision approved → resume craftsman-mode |
+| New feature, or feature-level pivot | brief → "→ specify" |
+| Significant pivot — the Vision moves | human approves new Vision → craftsman-mode refresh → "→ specify" |
+| Mid-flight execution fog or spec contradiction | human rules on the spec → "→ plan" |
 
 ## Never
 - Judge while diverging, or keep diverging while converging.
