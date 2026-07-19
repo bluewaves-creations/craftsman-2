@@ -165,16 +165,61 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       gate cross-check + validator green.
 
 ## Batch 11 — holistic extended review (advisory)
-- [ ] 11.1 Dispatch six fresh-context reviewers, one per dimension:
+- [x] 11.1 Dispatch six fresh-context reviewers, one per dimension:
       consistency · flow smoothness (scenario walks) · edge-case coverage ·
       goals/philosophy compliance (incl. token accounting) · skill
       best-in-class audit (triggers, non-triggers, handovers) · Apple
       Xcode 27 native-skills composition (v1 delegation pattern as
       baseline).
-- [ ] 11.2 Synthesize: dedupe, verify key findings against the tree,
+- [x] 11.2 Synthesize: dedupe, verify key findings against the tree,
       rank by severity with the evidence rule.
-- [ ] 11.3 Report + proposed improvement batch (human approves before
-      anything is implemented — extended review changes no code).
+- [x] 11.3 Report + proposed improvement batches (below, awaiting human
+      approval — extended review changes no code).
+
+## Batch 12 (PROPOSED — correctness, no design decisions) — awaiting approval
+- 12.1 Plan gains a fourth mode, "Mid-flight intake": seats spec deltas,
+      architecture-blocked, stale-plan, execution-fog handoffs; specify's
+      After-the-freeze gains its missing exit hop "→ plan (mid-flight)".
+- 12.2 Budget coherence: implement's regression row defers to verify's
+      class budgets (2, not 3); fix's 3+3 signaled in the standing
+      contract; in-flight budget tally recorded in PLAN State on any
+      boundary/compaction so it survives fresh sessions.
+- 12.3 Quick-path precision: define observable ("reaches a user, an API
+      consumer, or a criterion — rendered copy is behavior; comments,
+      docs, internal names are not"); mid-task compaction breadcrumb
+      (fresh-session row: uncommitted changes → the failing test names
+      the interrupted spot).
+- 12.4 Gate hardening: check.sh verifies symlink target (readlink),
+      description ≤1024, reverse Flow binding (every skill except
+      craftsman-mode in a Flow row), wires agentskills validate when
+      available.
+- 12.5 Polish sweep: finish description de-processed; plan drops "where
+      were we"; new-project entry clarified (craftsman-mode orchestrates
+      brainstorm); fix boundary sentence for in-loop reds; ledger rows
+      complete (specify/finish/init commits); PLAN goals citation fixed;
+      frontmatter versions unified.
+
+## Batch 13 (PROPOSED — Apple / Xcode 27 composition) — awaiting approval
+- 13.1 craftsman-mode: Apple-project probe — export Apple's skills
+      (xcrun agent skills export), register Xcode MCP / Apple docs as
+      Documentation source, record the delegation in AGENTS.md.
+- 13.2 Precedence statement (review checklist + template Rules): Apple's
+      exported skills own SwiftUI/testing idiom on Apple platforms.
+- 13.3 Native-app gate row corrected (xcodebuild test / swift test ·
+      swiftlint · xcodebuild build; xcresult as evidence); Swift rule
+      example refreshed (Approachable Concurrency, @Observable, Swift
+      Testing).
+
+## Open design questions (human decision needed before any batch 14)
+- Never-override posture: recommended — the human may waive any Never
+  explicitly; the waiver is recorded in ADR.md (sovereignty with a
+  ledger, never silent).
+- Remote verdicts: recommended — AGENTS.md Gates may name CI as the
+  authoritative environment; CI red blocks finish even when local green.
+- Multi-feature delivery: recommended — finish preflight scoped to a
+  feature's C-id range when the human names one.
+- Speed relief: allow self-review form for single-task batches?
+- Maintenance lane (dep bumps, CVE patches): route and ceremony?
 
 ## Later batches (draft)
 - One batch per remaining skill: brainstorm, specify, plan, implement,
