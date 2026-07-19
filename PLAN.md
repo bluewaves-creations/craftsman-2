@@ -66,22 +66,17 @@ Runs in ~/Developer/craftsman-pilot (empty, confirmed).
       findings → batch 17b. Done: C13 ticked.
 
 ## Batch 17b — pilot findings (proposed, human validates)
-- [ ] 17b.1 Constitution budget gate: craftsman-mode init verifies
-      AGENTS.md ≤100 lines before committing it (pilot wrote 161,
-      blowing C10's always-on bound); check.sh pins the template ≤100
-      as rendered constitution (closes the open Gap below).
-- [ ] 17b.2 plan skill: Initial mode gains a human validation stop —
-      present the plan, wait for the go, only then "→ implement, task
-      1.1" (pilot launched implementation unvalidated; the skill as
-      written told it to — only Re-plan had a Wait).
-- [ ] 17b.3 plan skill: boundary go made skip-resistant — Re-plan's
-      only exit is report + wait for the human's go (pilot crossed
-      four boundaries without it despite the Never; distinct from
-      compaction).
-- [ ] 17b.4 plan skill: compaction proposal at every successful batch
-      boundary made part of the boundary report's fixed shape (pilot:
-      zero proposals in five boundaries; context hygiene, distinct
-      from the go).
+- [x] 17b.1 Constitution budget gate. Done: check.sh pins template ≤100
+      (red→green proven at 104); craftsman-mode Never commits an
+      oversize AGENTS.md, `wc -l` named. (a3d15a8)
+- [x] 17b.2 plan Initial mode validation stop. Done: step 5 "Present
+      the plan — wait for the go", announce moved behind the yes.
+- [x] 17b.3 boundary go skip-resistant. Done: Re-plan step 4 is now
+      "Boundary report — the only exit", go asked explicitly.
+- [x] 17b.4 compaction offer mandatory. Done: part of the boundary
+      report's fixed shape, "isn't skippable even when the go is
+      instant". (17b.2–4: 74cb672, one commit — three tasks share the
+      one file and its golf; SKILL.md held at 70/70.)
 - Struck: fix-skill ledger-defect-first — evidence withdrawn (white
   screen was a human-side mistake; the interruption/branch was manual,
   not thread loss; fix routed and diagnosed correctly).
