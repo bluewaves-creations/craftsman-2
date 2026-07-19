@@ -18,7 +18,10 @@ immediately.
    - Conventions: what good code looks like here — capture one example each.
    - Documentation: the official source per framework and library (MCP
      server, docs/ folder, llms.txt). A library not listed later → stop and
-     ask before coding against it.
+     ask before coding against it. Apple/Xcode project → export Apple's
+     skills (`xcrun agent skills export ~/.agents/skills`), register the
+     Xcode MCP (mcpbridge) or Apple docs as a source, and record the
+     delegation in AGENTS.md: Apple's skills own SwiftUI/testing idiom.
 
    A slot you cannot fill without guessing → the brainstorm handoff in the
    skill's shared rules.
@@ -28,7 +31,8 @@ immediately.
    - Seed Rules: the universal four (the comments rule adapts to the
      project's medium), then 2–4 stack rules read from the official docs —
      current idioms, one line each. Shape:
-     - Swift: actors over locks; async/await, never completion handlers.
+     - Swift: Approachable Concurrency — main actor by default,
+       @concurrent only when profiled; @Observable models; Swift Testing.
      - React: server components by default; client only at interaction.
      - Python data: vectorize with polars/pandas; no row loops over frames.
    - `ln -s AGENTS.md CLAUDE.md`
@@ -41,7 +45,8 @@ immediately.
    |---|---|
    | Web frontend | vitest/jest · eslint · tsc · production build |
    | Backend / API | stack test runner · linter · types · container build |
-   | Native app | XCTest / gradle test · swiftlint / ktlint · release build |
+   | Native app (Apple) | xcodebuild test / swift test · swiftlint · xcodebuild build (xcresult as evidence) |
+   | Native app (Android) | gradle test · ktlint · gradle assembleRelease |
    | Data / ML | pytest · ruff · mypy · dbt test / pipeline dry-run |
    | CLI / library | cargo test+clippy · go test+vet · stack equivalent |
 

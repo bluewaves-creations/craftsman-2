@@ -37,7 +37,8 @@ or a human-named scope → extended (advisory, no code). Unsure → ask.
    nothing else — and if the plan itself is wrong, say so) · architecture
    & design (`references/architecture.md`) · code quality
    (`references/code-quality.md`) · tests (meaningful assertions — would
-   the mutation die?) · conventions (match the AGENTS.md examples).
+   the mutation die?) · conventions (AGENTS.md examples; platform-vendor
+   skills — e.g. Apple's for SwiftUI/testing — outrank generic idiom).
 3. **Receive with rigor** — verify each finding against the code before
    acting; no performative agreement. Unconfirmable → mark plausible, the
    human decides. Any finding unclear → clarify before fixing *any*;

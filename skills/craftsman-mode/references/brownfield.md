@@ -23,7 +23,8 @@ explicit — then it is a normal Craftsman project.
      human wants the code moved there.
    - Seed Rules: the universal four (the comments rule adapts to the
      project's medium), then 2–4 stack rules from official docs, checked
-     against what the code actually does.
+     against what the code actually does. Apple/Xcode project → export
+     Apple's skills and record the delegation (greenfield step 2).
    - A slot you cannot fill without guessing → the brainstorm handoff in
      the skill's shared rules.
 

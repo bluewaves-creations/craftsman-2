@@ -24,9 +24,11 @@ Perpetual — bind on every line, every phase. Activity rules live in the skills
 - **Comments say why, never what**:
   ✗ `// increment retry counter`
   ✓ `// idempotency keys expire after 24h — refresh before retry`
-- {Stack rule — seeded at init from official docs, e.g. "Swift: actors over
-  locks; async/await, never completion handlers"}
-- {Stack rule}
+- {Stack rule — seeded at init from official docs, e.g. "Swift:
+  Approachable Concurrency — main actor by default; @Observable models;
+  Swift Testing"}
+- {Stack rule — on Apple platforms: "Apple's exported Xcode skills own
+  SwiftUI/testing idiom — defer, don't contradict"}
 
 ## Conventions
 One example each — match the shape. {grows as the code teaches}
