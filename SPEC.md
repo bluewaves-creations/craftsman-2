@@ -58,7 +58,7 @@ human validation. Verify ticks the boxes.
 ## Open source release — replaces Craftsman v1
 - [x] C14. LICENSE at the repo root matches the MIT declared in every
       skill's frontmatter.
-- [ ] C15. README is the front door: hero + one-line promise, badges
+- [x] C15. README is the front door: hero + one-line promise, badges
       (license, gate CI, release), what-and-why, install command,
       60-second quickstart, the flow table, the nine skills at a glance,
       lineage (v1 and superpowers — what changed and why), contributing
@@ -72,7 +72,7 @@ human validation. Verify ticks the boxes.
 - [x] C17. Public CI runs `scripts/check.sh` + the open-spec validator
       on every push and PR; the README badge reflects it. Once named,
       CI red blocks finish (the flow's own CI gate row, activated).
-- [ ] C18. Contributor docs: CONTRIBUTING.md routes contributions
+- [x] C18. Contributor docs: CONTRIBUTING.md routes contributions
       through the flow itself (spec delta → batch → gates); releases
       carry a changelog; a migration note tells a v1 user exactly what
       replaces what.

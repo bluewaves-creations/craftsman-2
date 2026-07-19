@@ -4,8 +4,15 @@ Adapts at every batch boundary. The spec never moves: SPEC.md C1–C18
 (approved 2026-07-19), replacing the founding-brief proxy.
 
 ## State
-- In flight: batch 19 (front door + ship) — go given 2026-07-19. After
-  it: → finish. Batch 18 done; C14/C16/C17 ticked.
+- In flight: nothing — batch 19 done; C15/C18 ticked. **All 18 criteria
+  ticked (18/18).** v2.0.0 live:
+  https://github.com/bluewaves-creations/craftsman-2/releases/tag/v2.0.0
+  Next: → finish on human go.
+- Review 19 disposition: 11 findings, all fixed (uv prerequisite +
+  validator-skip caveat, M3 model credit, ceremony definition, badge
+  resolved by publishing the Release, migration table attested rows
+  only, commit types defer to Ledgers, reviewer-judged budget split,
+  install copy-into wording, init/refresh, constitution as v2 state).
 - Release ritual: after skill edits land here, re-run
   `scripts/install.sh` to re-sync `~/.agents/skills` (batch 18 made it
   one command; no skill files changed in 18, so no sync owed).
@@ -112,14 +119,19 @@ Runs in ~/Developer/craftsman-pilot (empty, confirmed).
       origin/main. (43dc2c6 + 7ad3e06 cache-warning fix)
 
 ## Batch 19 — front door, then ship
-- [ ] 19.1 README rewrite (C15): hero + promise, badges (license, CI,
+- [x] 19.1 README rewrite (C15): hero + promise, badges (license, CI,
       release), install command, 60-second quickstart, flow table, nine
       skills at a glance, lineage with measured pilot numbers,
-      contributing + license sections. Done: newcomer routes a first
-      task from the README alone.
-- [ ] 19.2 CONTRIBUTING.md (contributions route through the flow) + v1
+      contributing + license sections. Done: all sections present;
+      every pilot number cross-checked against docs/pilot-2026-07-19.md
+      by fresh-eyes review; all relative links resolve; badges render
+      ("release: v2.0.0", "license: MIT" via shields). (f234078)
+- [x] 19.2 CONTRIBUTING.md (contributions route through the flow) + v1
       migration note + tagged v2.0.0 release with changelog (C18).
-      Done: release live on GitHub.
+      Done: release live (draft=false, changelog in notes) —
+      https://github.com/bluewaves-creations/craftsman-2/releases/tag/v2.0.0
+      CONTRIBUTING + docs/migrating-from-v1.md landed (0164aeb); CI
+      green on every push in the batch.
 
 Then → finish: every criterion ticked, full QA, delivery.
 
