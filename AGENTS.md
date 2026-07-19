@@ -67,8 +67,7 @@ Thoughts that precede a broken rule — stop and route instead:
 ## Ledgers
 | Artifact | Records | Written by |
 |---|---|---|
+| SPEC.md | what must be true | agent drafts, I validate; verify ticks boxes |
 | PLAN.md | batches, gaps | plan/review; implement+verify+fix log gaps; verify ticks; finish closes |
 | ADR.md | decisions and dead ends | any skill appends; finish consolidates, human-gated |
 | git log | implementation narrative | implement per task · plan per boundary · verify/review/fix fixes · init/specify/finish milestones |
-
-No SPEC.md yet — goals live in README until the flow stabilizes.
