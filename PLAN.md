@@ -130,6 +130,22 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
 - [x] 8.3 references/security-performance.md lens; close the extended-lens
       Gap; seam sweep (verify→review, review→plan); gate + validator green.
 
+## Batch 9 — finish best-in-class
+- [ ] 9.1 Rework finish SKILL.md: preflight guard (unticked criterion or
+      unreviewed batch → not finish; Deferred questions resolved or
+      carried); Gaps triage (fix now / defer with ADR reason / human
+      accepts — none silent); full QA per verify's evidence rules with
+      bounded loops; improvement pass via extended review (accepted
+      findings → final improvement batch); ADR consolidation human-gated +
+      stale detection ("confirm or supersede?"); docs true on a clean
+      machine; final State entry + delivery menu (merge / PR / tag / keep;
+      typed "discard"); finish is a boundary — suggest compaction.
+- [ ] 9.2 references/completion.md: preflight + triage protocol, ADR
+      consolidation method, docs verification checklist, delivery menu
+      rules, final report format, boundary close.
+- [ ] 9.3 Seam sweep: plan gap-check suggests "→ finish" at zero unticked
+      C-ids; Flow row check; gate + validator green.
+
 ## Later batches (draft)
 - One batch per remaining skill: brainstorm, specify, plan, implement,
   verify, review, finish — same treatment; strip rules the perpetual tier
