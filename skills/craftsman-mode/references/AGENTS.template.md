@@ -64,7 +64,7 @@ Announce the active skill ("→ implement, task 2.1"). Route by state:
 | Next task open in PLAN.md | implement |
 | Task code complete | verify |
 | Defect — broken, crashing, regressed, outside the task loop | fix |
-| Maintenance — dependency, toolchain, or CVE update | plan |
+| Maintenance — dep/toolchain/CVE update (actively exploited → fix) | plan |
 | Batch tasks all verified | review |
 | Every criterion ticked, last batch reviewed | finish |
 
@@ -85,7 +85,9 @@ docs, mechanical rename) skips plan and review — never the gates: full
 gates, evidence, one typed commit. Observable means it reaches a user, an
 API consumer, or a criterion — rendered copy is behavior; comments, docs,
 and internal names are not. Test assertions stay untouched; the moment
-behavior appears, route by the Flow table.
+behavior appears, route by the Flow table. Dependency and toolchain bumps
+are never quick-path — behavior-neutrality isn't eyeball-checkable; route
+via Maintenance.
 
 ## Ledgers
 | Artifact | Records | Written by |

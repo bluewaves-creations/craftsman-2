@@ -23,7 +23,11 @@ for dir in skills/*/; do
     | awk '/^description:/{d=1; print; next} /^[a-zA-Z-]+:/{d=0} d')
   printf '%s' "$desc" | grep -q 'Use when' \
     || err "$s description must state triggers ('Use when …')"
-  dlen=$(printf '%s' "$desc" | tail -n +2 | tr -d '\n' | wc -c | tr -d ' ')
+  if printf '%s' "$desc" | head -1 | grep -q '^description: *[>|-]*$'; then
+    dlen=$(printf '%s' "$desc" | tail -n +2 | tr -d '\n' | wc -c | tr -d ' ')
+  else
+    dlen=$(printf '%s' "$desc" | head -1 | sed 's/^description: *//' | wc -c | tr -d ' ')
+  fi
   [ "$dlen" -le 1024 ] || err "$s description is $dlen chars (spec limit 1024)"
   for ref in "${dir}references/"*.md; do
     [ -e "$ref" ] || continue

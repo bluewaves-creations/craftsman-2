@@ -5,7 +5,7 @@ description: >
   work. Use when every criterion in SPEC.md is ticked and the last batch
   review is closed ("finish", "wrap up", "ship it", "are we done?"). Not
   for closing a batch (review → plan), not for proving a task (verify),
-  and never while a criterion is unticked.
+  and never while an in-scope criterion is unticked.
 license: MIT
 compatibility: Requires the gate commands from AGENTS.md and git.
 metadata:
@@ -32,7 +32,8 @@ live.
    fix now (implement → verify loop), defer (ADR.md entry with the
    reason), or the human accepts it as-is.
 2. **Full QA** — every gate, full scope, fresh, on the final tree — and
-   a Gates-named CI environment green too. Verify's evidence rules and
+   a Gates-named CI environment green too (push the branch to trigger it
+   before QA when needed). Verify's evidence rules and
    per-failure budgets apply. Walk SPEC.md: each C-id's demonstration
    re-confirmed. Budget spent → stop, report.
 3. **Improvement pass** — offer an extended review (advisory). Accepted
@@ -56,7 +57,8 @@ live.
 
 ## Never
 
-- Finish with a criterion unticked, a Gap undisposed, or a red gate.
+- Finish with an in-scope criterion unticked, a Gap undisposed, or a red
+  gate.
 - Consolidate or delete ADR history without human approval.
 - Ship documentation you didn't re-verify against the tree.
 - Execute a destructive delivery without its typed confirmation.

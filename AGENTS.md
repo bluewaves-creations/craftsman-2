@@ -49,7 +49,8 @@ lands in ADR.md, never silent.
 Quick path: a change with no observable behavior
 (observable = reaches a user, an API consumer, or a criterion; rendered
 copy is behavior, comments and docs are not) skips plan and review —
-never the gates: full gates, evidence, one typed commit.
+never the gates: full gates, evidence, one typed commit. Dep bumps are
+never quick-path — behavior-neutrality isn't eyeball-checkable.
 
 ## Ledgers
 | Artifact | Records | Written by |

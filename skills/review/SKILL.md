@@ -33,7 +33,7 @@ or a human-named scope → extended (advisory, no code). Unsure → ask.
    (not everything is critical), and the evidence rule — every finding
    cites file:line plus a failure scenario or concrete counterexample.
    No subagent → self-review after re-reading spec and bar, same rules;
-   a single-task batch may choose the self-review form too.
+   a single-task batch may use it too — note the choice in the report.
 2. **Checklist** — spec compliance (the diff does what the criteria say,
    nothing else — and if the plan itself is wrong, say so) · architecture
    & design (`references/architecture.md`) · code quality
