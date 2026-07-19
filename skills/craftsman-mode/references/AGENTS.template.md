@@ -53,7 +53,7 @@ Announce the active skill ("→ implement, task 2.1"). Route by state:
 
 | State | Skill |
 |---|---|
-| Direction unclear — new project or pivot | brainstorm |
+| Direction unclear, or work turned complex, fuzzy, or ambiguous | brainstorm |
 | Work described, no acceptance criteria | specify |
 | Spec approved, or batch boundary passed | plan |
 | Next task open in PLAN.md | implement |
