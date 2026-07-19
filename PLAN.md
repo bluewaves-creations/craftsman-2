@@ -99,6 +99,21 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       bad→good table, refactor-commit boundaries; ADR note on commit
       discipline; gate + validator green.
 
+## Batch 7 — verify best-in-class
+- [ ] 7.1 Rework verify SKILL.md: open-spec frontmatter; fresh-evidence
+      doctrine (output that didn't run after the last change doesn't
+      exist); method — all gates full scope → done-line demonstration →
+      evidence pasted → red fix loop with failure classes and budgets
+      (new-code 3, regression 2, environment 1) + amend path → gap pass →
+      tick C-box and task box → route ("→ implement" next task or
+      "→ review" when the batch is fully ticked).
+- [ ] 7.2 references/evidence.md: evidence anatomy, claims→required-proof
+      table, regression red-green re-verification, subagent diff-not-report
+      rule, failure classification, gap-pass question set, excuse→reality
+      table.
+- [ ] 7.3 Seam sweep (Flow row, Gates wording, implement handoff) +
+      gate + validator green.
+
 ## Later batches (draft)
 - One batch per remaining skill: brainstorm, specify, plan, implement,
   verify, review, finish — same treatment; strip rules the perpetual tier
