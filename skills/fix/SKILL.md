@@ -10,7 +10,7 @@ description: >
 license: MIT
 compatibility: Requires the gate commands from AGENTS.md and git.
 metadata:
-  version: "0.1.0"
+  version: "1.0.0"
 ---
 
 # Fix

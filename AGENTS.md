@@ -43,16 +43,18 @@ Green means exit 0, evidence pasted.
 This repo is its own product — edits route through the same state table as
 any project (see skills/craftsman-mode/references/AGENTS.template.md).
 Announce the active skill. Batches of 2–4 tasks · verify each task ·
-review each batch · attempt budget spent (3 default; verify classifies)
-→ stop, ADR.md, ask me. Quick path: a change with no observable behavior
-skips plan and review — never the gates: full gates, evidence, one typed
-commit; the moment behavior appears, route by the Flow table.
+review each batch · attempt budget spent (3 default; verify classifies;
+fix carries diagnose + repair separately) → stop, ADR.md, ask me.
+Quick path: a change with no observable behavior
+(observable = reaches a user, an API consumer, or a criterion; rendered
+copy is behavior, comments and docs are not) skips plan and review —
+never the gates: full gates, evidence, one typed commit.
 
 ## Ledgers
 | Artifact | Records | Written by |
 |---|---|---|
 | PLAN.md | batches, gaps | plan/review; implement+verify+fix log gaps; verify ticks; finish closes |
 | ADR.md | decisions and dead ends | any skill appends; finish consolidates, human-gated |
-| git log | implementation narrative | implement per task; plan per boundary; verify/review/fix fixes |
+| git log | implementation narrative | implement per task · plan per boundary · verify/review/fix fixes · init/specify/finish milestones |
 
 No SPEC.md yet — goals live in README until the flow stabilizes.

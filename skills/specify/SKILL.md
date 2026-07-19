@@ -10,7 +10,7 @@ description: >
 license: MIT
 compatibility: Best with official-docs access (MCP servers or docs/) for grounding criteria.
 metadata:
-  version: "0.2.0"
+  version: "1.0.0"
 ---
 
 # Specify
@@ -53,7 +53,8 @@ wording. You may draft and refine the proposal — validation is always
 human; no alteration lands in SPEC.md without it. Apply the validated
 text, one commit, no silent merges. REMOVED keeps its ID as a struck
 tombstone — IDs never vanish, so plan references never dangle silently.
-Implementation contradicting the spec → stop, propose, wait.
+Implementation contradicting the spec → stop, propose, wait. Announce the
+handoff: "→ plan (intake)" — the delta gets seated, not shelved.
 
 ## Never
 

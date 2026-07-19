@@ -11,7 +11,7 @@ description: >
 license: MIT
 compatibility: Requires git and a harness that always loads AGENTS.md or CLAUDE.md.
 metadata:
-  version: "0.2.0"
+  version: "1.0.0"
 ---
 
 # Craftsman Mode — Init

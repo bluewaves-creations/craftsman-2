@@ -84,9 +84,11 @@ Written by re-plan at every boundary — the post-compaction briefing:
 Batch 2 closed 2026-07-19. Next: batch 3 (C7–C9).
 - Decided: rank in SQL, not app code — 40ms vs 300ms on fixture (ADR).
 - Failed: pg_trgm for ranking — no phrase support; don't retry.
+- In flight: C8 red (regression class), 1 of 2 attempts spent.
 - Open: is 10k-record fixture representative? (human)
 ```
 
 Only what disk and git cannot re-derive: decisions with their why, failed
-approaches with their reason, open questions. Never file contents, tool
-output, or anything a fresh `git log` / file read reproduces.
+approaches with their reason, in-flight attempt tallies (budgets must
+survive compaction), open questions. Never file contents, tool output, or
+anything a fresh `git log` / file read reproduces.

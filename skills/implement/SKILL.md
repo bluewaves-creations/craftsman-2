@@ -9,7 +9,7 @@ description: >
 license: MIT
 compatibility: Best with official-docs access (MCP servers or docs/); requires git.
 metadata:
-  version: "0.2.0"
+  version: "1.0.0"
 ---
 
 # Implement
@@ -53,7 +53,7 @@ enough for now". Production grade is the only grade.
 | Spec contradicts reality | stop → propose via specify, human rules |
 | Architecture blocks the task | stop → "→ plan"; never hack around it |
 | A bug blocks this task | stop → "→ fix"; resume the task after green |
-| A regression this task caused | yours — root-cause it now (step 4) |
+| A regression this task caused | yours — root-cause now (budget 2, verify's class) |
 | Pre-existing unrelated bug | log to PLAN.md Gaps; no drive-by fixes |
 
 ## Never

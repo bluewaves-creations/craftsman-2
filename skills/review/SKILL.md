@@ -10,7 +10,7 @@ description: >
 license: MIT
 compatibility: Benefits from a subagent-capable harness for fresh-context review; requires git.
 metadata:
-  version: "0.2.0"
+  version: "1.0.0"
 ---
 
 # Review

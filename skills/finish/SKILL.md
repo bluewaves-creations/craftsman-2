@@ -1,15 +1,15 @@
 ---
 name: finish
 description: >
-  Turn a finished batch series into a finished piece of work — full QA,
-  consolidation, documentation, delivery. Use when every criterion in
-  SPEC.md is ticked and the last batch review is closed ("finish", "wrap
-  up", "ship it", "are we done?"). Not for closing a batch (review → plan),
-  not for proving a task (verify), and never while a criterion is unticked.
+  Close out a completed batch series as one finished, delivered piece of
+  work. Use when every criterion in SPEC.md is ticked and the last batch
+  review is closed ("finish", "wrap up", "ship it", "are we done?"). Not
+  for closing a batch (review → plan), not for proving a task (verify),
+  and never while a criterion is unticked.
 license: MIT
 compatibility: Requires the gate commands from AGENTS.md and git.
 metadata:
-  version: "0.2.0"
+  version: "1.0.0"
 ---
 
 # Finish

@@ -10,7 +10,7 @@ description: >
 license: MIT
 compatibility: Best with official-docs access (MCP servers or docs/) for feasibility grounding.
 metadata:
-  version: "0.3.0"
+  version: "1.0.0"
 ---
 
 # Brainstorm

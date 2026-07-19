@@ -4,7 +4,8 @@ cd "$(dirname "$0")/.."
 fail=0
 err() { echo "FAIL: $1"; fail=1; }
 
-[ -L CLAUDE.md ] || err "CLAUDE.md must be a symlink to AGENTS.md"
+[ -L CLAUDE.md ] && [ "$(readlink CLAUDE.md)" = "AGENTS.md" ] \
+  || err "CLAUDE.md must be a symlink pointing at AGENTS.md"
 
 agents_lines=$(wc -l < AGENTS.md | tr -d ' ')
 [ "$agents_lines" -le 100 ] || err "AGENTS.md is $agents_lines lines (budget 100)"
@@ -18,9 +19,12 @@ for dir in skills/*/; do
   base=$(basename "${dir%/}")
   grep -q "^name: $base\$" "$s" || err "$s frontmatter name must be '$base' (match directory)"
   [ "$(grep -c '^---$' "$s")" -ge 2 ] || err "$s frontmatter is not closed"
-  awk '/^---$/{c++; next} c==1' "$s" \
-    | awk '/^description:/{d=1; print; next} /^[a-zA-Z-]+:/{d=0} d' \
-    | grep -q 'Use when' || err "$s description must state triggers ('Use when …')"
+  desc=$(awk '/^---$/{c++; next} c==1' "$s" \
+    | awk '/^description:/{d=1; print; next} /^[a-zA-Z-]+:/{d=0} d')
+  printf '%s' "$desc" | grep -q 'Use when' \
+    || err "$s description must state triggers ('Use when …')"
+  dlen=$(printf '%s' "$desc" | tail -n +2 | tr -d '\n' | wc -c | tr -d ' ')
+  [ "$dlen" -le 1024 ] || err "$s description is $dlen chars (spec limit 1024)"
   for ref in "${dir}references/"*.md; do
     [ -e "$ref" ] || continue
     rl=$(wc -l < "$ref" | tr -d ' ')
@@ -35,5 +39,17 @@ flow_skills=$(awk -F'|' '/^## Flow[[:space:]]*$/{f=1;next} /^## /{f=0} f && NF==
 for sk in $flow_skills; do
   [ -d "skills/$sk" ] || err "Flow table names '$sk' but skills/$sk is missing"
 done
+for dir in skills/*/; do
+  base=$(basename "${dir%/}")
+  echo "$flow_skills" | grep -qx "$base" \
+    || err "skills/$base exists but no Flow-table row routes to it"
+done
+
+if command -v uvx >/dev/null 2>&1; then
+  for dir in skills/*/; do
+    uvx --from skills-ref agentskills validate "$dir" >/dev/null 2>&1 \
+      || err "agentskills validate failed for $dir"
+  done
+fi
 
 [ "$fail" -eq 0 ] && echo "check: all green" || exit 1

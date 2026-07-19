@@ -1,7 +1,7 @@
 # Plan — Craftsman 2
 
 Adapts at every batch boundary. Spec proxy until SPEC.md exists: the three
-core goals — quality, speed, token efficiency (README).
+core goals — quality, speed, token efficiency (founding brief, 2026-07-19).
 
 ## Batch 1 — AGENTS.md template v2
 - [x] 1.1 Add **Rules** section — perpetual tier only: universal seed

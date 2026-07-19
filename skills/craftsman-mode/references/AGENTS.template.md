@@ -53,7 +53,8 @@ Announce the active skill ("→ implement, task 2.1"). Route by state:
 
 | State | Skill |
 |---|---|
-| New project, significant pivot, or direction unclear / conflicting goals | brainstorm |
+| New project — no constitution yet (it orchestrates brainstorm) | craftsman-mode |
+| Significant pivot, or direction unclear / conflicting goals | brainstorm |
 | Work described, no acceptance criteria | specify |
 | Spec approved, or batch boundary passed | plan |
 | Next task open in PLAN.md | implement |
@@ -63,17 +64,21 @@ Announce the active skill ("→ implement, task 2.1"). Route by state:
 | Every criterion ticked, last batch reviewed | finish |
 
 Fresh session: read SPEC.md, PLAN.md (State section + current batch),
-ADR.md, `git log -5` — then route by state.
+ADR.md, `git log -5` — then route by state. Uncommitted changes → an
+interrupted task; its failing test names the spot — finish it first.
 
 Standing contract: spec frozen at approval — the agent drafts and refines,
 validation is always mine, no spec alteration without it (verify ticks
 boxes) · plan adapts each batch, 2–4 tasks per batch · attempt budget
-spent (3 default; verify classifies) → stop, ADR.md, ask me · extended
-review on demand, advisory only.
+spent (3 default; verify classifies; fix carries diagnose + repair
+separately) → stop, ADR.md, ask me · extended review on demand, advisory
+only.
 
-Quick path: a change with no observable behavior (typo, comment, docs,
-mechanical rename) skips plan and review — never the gates: full gates,
-evidence, one typed commit. Test assertions stay untouched; the moment
+Quick path: a change with no observable behavior (typo in a comment,
+docs, mechanical rename) skips plan and review — never the gates: full
+gates, evidence, one typed commit. Observable means it reaches a user, an
+API consumer, or a criterion — rendered copy is behavior; comments, docs,
+and internal names are not. Test assertions stay untouched; the moment
 behavior appears, route by the Flow table.
 
 ## Ledgers
@@ -82,4 +87,4 @@ behavior appears, route by the Flow table.
 | SPEC.md | what must be true | agent drafts, I validate; verify ticks boxes |
 | PLAN.md | path, batches, gaps | plan/review; implement+verify+fix log gaps; verify ticks; finish closes |
 | ADR.md | decisions and dead ends | any skill appends; finish consolidates, human-gated |
-| git log | implementation narrative | implement per task; plan per boundary; verify/review/fix fixes |
+| git log | implementation narrative | implement per task · plan per boundary · verify/review/fix fixes · init/specify/finish milestones |
