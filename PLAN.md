@@ -25,17 +25,17 @@ core goals — quality, speed, token efficiency (README).
 
 ## Batch 2 — craftsman-mode best-in-class
 Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
-- [ ] 2.1 Gate first: check.sh validates name matches directory and
+- [x] 2.1 Gate first: check.sh validates name matches directory and
       description contains "Use when" anywhere in frontmatter (open-spec
       folded descriptions). Done: green on current skills, red on violation.
-- [ ] 2.2 Rework craftsman-mode: open-spec frontmatter (folded description
+- [x] 2.2 Rework craftsman-mode: open-spec frontmatter (folded description
       with triggers + non-triggers, license, compatibility), route table
       (greenfield / brownfield / refresh, no default), brainstorm-on-ambiguity
       handoff, stack-agnostic gate discovery (web, apps, data, CLI), rules
       seeding, red→green loop proof. references/greenfield.md +
       brownfield.md. Sources: skill-shaper, Craftsman v1 init, superpowers
       SDO. Done: gate green; open-spec validator passes if available.
-- [ ] 2.3 Record the description-format decision (triggers and boundaries,
+- [x] 2.3 Record the description-format decision (triggers and boundaries,
       never process) in ADR.md; update the AGENTS.md convention example.
 
 ## Later batches (draft)
