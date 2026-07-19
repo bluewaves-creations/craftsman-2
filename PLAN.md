@@ -67,6 +67,21 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
 - [x] 4.3 Align templates.md SPEC skeleton (C-ids, Deferred — open questions
       section) and PLAN done-line citation; gate + validator green.
 
+## Batch 5 — plan best-in-class
+- [ ] 5.1 Rework plan SKILL.md: three modes (initial / re-plan at boundary /
+      gap check); architecture grounding (docs → idiomatic patterns → file
+      map; consequential choices → ADR.md with rejected alternatives);
+      2-batch detail horizon (detail decays); boundary protocol borrowed
+      from v1: fold learnings → gap pass → extract State → suggest
+      compaction unconditionally → wait.
+- [ ] 5.2 references/plan-authoring.md: plan header (goal, architecture,
+      constraints), file map, task anatomy (C-id · doc · files · interfaces
+      · done-line), right-sizing, batch shapes, no-placeholder list,
+      self-review, State-section format (extract only the non-derivable).
+- [ ] 5.3 templates.md PLAN skeleton (header + State section), review→plan
+      handoff line, ADR entry "plans carry structure, not code";
+      gate + validator green.
+
 ## Later batches (draft)
 - One batch per remaining skill: brainstorm, specify, plan, implement,
   verify, review, finish — same treatment; strip rules the perpetual tier
