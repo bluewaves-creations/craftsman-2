@@ -1,39 +1,53 @@
 ---
 name: craftsman-mode
-description: Use when bringing a project under the Craftsman flow — greenfield init, brownfield adoption, or refreshing a stale AGENTS.md
+description: >
+  Initialize the Craftsman flow in a project — greenfield or brownfield, any
+  stack: web, native apps, data, CLI. Use when the user says "init craftsman",
+  "set up craftsman", "craftsman mode", "adopt / bring this codebase under
+  craftsman", or when Craftsman work starts and AGENTS.md is missing or
+  stale. Not for feature work in an initialized project (route by the Flow
+  table in AGENTS.md) and not for writing acceptance criteria (specify).
+license: MIT
+compatibility: Requires git and a harness that always loads AGENTS.md or CLAUDE.md.
+metadata:
+  version: "0.2.0"
 ---
 
 # Craftsman Mode — Init
 
-Bring a project under the flow. Output: AGENTS.md (+ CLAUDE.md symlink),
-SPEC.md, PLAN.md, ADR.md, and gates that actually run.
+Outcome: constitution (AGENTS.md + CLAUDE.md symlink), ledgers (SPEC.md,
+PLAN.md, ADR.md), gates that actually run, one red→green proof. Ends by
+routing into the Flow table.
 
-## Route
+## Route — no default path; if the signal is unclear, ask
 
-| Situation | Path |
-|---|---|
-| Empty or near-empty repo | Greenfield |
-| Existing code | Brownfield |
-| AGENTS.md exists but wrong | Refresh — show a diff, never silently overwrite |
+| Signal | Path | Load |
+|---|---|---|
+| Empty or near-empty repo | Greenfield | `references/greenfield.md` |
+| Existing code, no Craftsman constitution | Brownfield | `references/brownfield.md` |
+| AGENTS.md exists but stale or wrong | Refresh | below |
 
-## Greenfield
-1. Interview briefly: vision (what, who, why), stack, hard constraints.
-   Short questions, one at a time.
-2. Write AGENTS.md from `references/AGENTS.template.md`.
-   Symlink: `ln -s AGENTS.md CLAUDE.md`.
-3. Scaffold the stack's standard toolchain; declare its gates in AGENTS.md.
-4. Create SPEC.md, PLAN.md, ADR.md from `references/templates.md`.
-5. Prove the loop closes: one trivial failing test → make it pass → run every
-   gate → first commit.
+Refresh: re-observe (run the gates, sample the code), diff observed truth
+against AGENTS.md, propose the diff — never silently overwrite. Re-validate
+the seeded stack rules against current official docs.
 
-## Brownfield
-1. Observe, don't infer: read real files, run the existing commands.
-   Conventions come from what the code does, not what its docs claim.
-2. Follow greenfield steps 2–4, with conventions sampled from the actual code.
-3. Run every declared gate once. A gate that doesn't run today is not declared —
-   record it in ADR.md as a gap instead.
+## Shared rules
+
+- **Observed, not inferred.** Every AGENTS.md line is a command you executed
+  successfully or a fact the human attested. A missing section beats an
+  invented one.
+- **Brainstorm on ambiguity.** If a template slot (Vision, Stack, Constraint)
+  cannot be filled without guessing, or answers conflict, invoke the
+  brainstorm skill, converge, then resume here at the unfilled slot.
+- **Confirm before writing.** List every file you will create or modify and
+  get a yes. Not a git repo → offer `git init` first; the ledgers need git.
+- **Gates are the stack's own toolchain** — test, lint, types, build, or
+  their stack equivalents. Declare only commands you ran; the loaded
+  reference has a per-project-type table.
+- **Close the loop.** Init is done when one trivial test went red → green
+  through the declared gates. A bootstrap that never saw red proved nothing.
 
 ## Never
-- Declare a gate you haven't personally seen exit 0 or fail honestly.
-- Overwrite an existing AGENTS.md without showing the diff first.
-- Pad AGENTS.md past 100 lines — cut conventions before cutting gates.
+- Let an inferred claim into AGENTS.md.
+- Declare a gate you haven't run on this machine.
+- Finish without the red→green proof and a first commit.
