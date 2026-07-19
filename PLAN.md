@@ -147,7 +147,7 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       C-ids; Flow row check; gate + validator green.
 
 ## Batch 10 — fix, the ninth skill
-- [ ] 10.1 Create skills/fix/SKILL.md: diagnose mandatory-first (reproduce
+- [x] 10.1 Create skills/fix/SKILL.md: diagnose mandatory-first (reproduce
       mechanically → read the whole error + recent changes/bisect →
       pre-action gate against ADR.md and rejected approaches → one
       hypothesis at a time, 3 dead → stop → spec check: true defect vs
@@ -156,10 +156,10 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       fix → full gates per verify → one fix commit); improve (optional
       post-green refactor, separate commit, reverts alone); route-back
       table (interrupted task / mid-batch / standalone).
-- [ ] 10.2 references/diagnosis.md: boundary instrumentation, bisect
+- [x] 10.2 references/diagnosis.md: boundary instrumentation, bisect
       protocol, differential debugging, minimal-repro shrinking,
       hypothesis log format, introducing-commit hunt.
-- [ ] 10.3 Flow integration: template Flow row for defects; implement's
+- [x] 10.3 Flow integration: template Flow row for defects; implement's
       blocked-by-bug route → "→ fix"; verify non-trigger boundary (its own
       fix loop stays); README flow table row; close the defect-route Gap;
       gate cross-check + validator green.
