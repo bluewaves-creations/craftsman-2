@@ -164,6 +164,18 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       fix loop stays); README flow table row; close the defect-route Gap;
       gate cross-check + validator green.
 
+## Batch 11 — holistic extended review (advisory)
+- [ ] 11.1 Dispatch six fresh-context reviewers, one per dimension:
+      consistency · flow smoothness (scenario walks) · edge-case coverage ·
+      goals/philosophy compliance (incl. token accounting) · skill
+      best-in-class audit (triggers, non-triggers, handovers) · Apple
+      Xcode 27 native-skills composition (v1 delegation pattern as
+      baseline).
+- [ ] 11.2 Synthesize: dedupe, verify key findings against the tree,
+      rank by severity with the evidence rule.
+- [ ] 11.3 Report + proposed improvement batch (human approves before
+      anything is implemented — extended review changes no code).
+
 ## Later batches (draft)
 - One batch per remaining skill: brainstorm, specify, plan, implement,
   verify, review, finish — same treatment; strip rules the perpetual tier
