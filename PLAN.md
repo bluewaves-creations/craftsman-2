@@ -115,7 +115,7 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       gate + validator green.
 
 ## Batch 8 — review best-in-class
-- [ ] 8.1 Rework review SKILL.md: picky stance (bar = AGENTS.md, applied
+- [x] 8.1 Rework review SKILL.md: picky stance (bar = AGENTS.md, applied
       never invented; strengths named — praise teaches taste); batch mode —
       fresh-context read-only reviewer on base..head with spec+plan context,
       findings received with rigor (verify before fixing, no performative
@@ -124,10 +124,10 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       minors fixed or Gaps-logged), exit "→ plan" re-plan; extended mode —
       human-scoped, lens-loaded, output = proposed improvement batch,
       advisory never a gate.
-- [ ] 8.2 references/architecture.md + code-quality.md lenses: picky
+- [x] 8.2 references/architecture.md + code-quality.md lenses: picky
       checklists with micro-examples and the evidence rule (file:line +
       failure scenario or concrete counterexample).
-- [ ] 8.3 references/security-performance.md lens; close the extended-lens
+- [x] 8.3 references/security-performance.md lens; close the extended-lens
       Gap; seam sweep (verify→review, review→plan); gate + validator green.
 
 ## Later batches (draft)
