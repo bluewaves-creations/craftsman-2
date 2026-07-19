@@ -144,5 +144,5 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
 - No mechanical link yet between template promises and skills that exist
   (1.4 closes part of it).
 - No trivial-change policy: does a typo fix pay the full flow?
-- Extended review has no on-demand lenses (architecture/security/perf
-  reference files).
+- ~~Extended review has no on-demand lenses~~ — closed by batch 8
+  (architecture, code-quality, security-performance references).
