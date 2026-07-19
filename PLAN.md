@@ -43,11 +43,16 @@ Runs in ~/Developer/craftsman-pilot (empty, confirmed).
 - [x] 17.1 Seed the flow into the pilot by hand — the manual steps become
       the install script's discovery input. Done: nine skills copied to
       pilot .claude/skills/, diff -r identical, validator green ×9.
-      Discovery for 18.2: install = mkdir -p .claude/skills + copy nine
-      dirs (user level: ~/.claude/skills) — nothing else; AGENTS.md and
-      ledgers belong to craftsman-mode init, so the installer never
-      touches them (C16 edge satisfied by construction). Idempotent by
-      re-copy. Verify = diff -r; validator optional (needs uvx).
+      Discovery for 18.2: install = copy nine dirs into `.agents/skills/`
+      (open-standard, harness-agnostic) + symlink `.claude/skills →
+      ../.agents/skills` for Claude Code discovery (docs: only .claude
+      paths are native; symlinks followed — verified on this machine,
+      user level mirrors it: ~/.claude/skills → ~/.agents/skills).
+      Nothing else; AGENTS.md and ledgers belong to craftsman-mode init,
+      so the installer never touches them (C16 edge by construction).
+      Idempotent by re-copy; respect an existing .claude/skills real dir
+      (copy into it instead of symlinking). Verify = diff -r; validator
+      optional (needs uvx).
 - [ ] 17.2 Run the flow end to end — auto-routing only, no skill named
       manually; record per-phase token overhead as it runs.
 - [ ] 17.3 Pilot report: measurements, friction → proposed improvement
