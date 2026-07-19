@@ -22,10 +22,11 @@ SPEC.md without approval, and approval freezes it.
 
 ## Method
 
-1. **Intake.** A brainstorm brief → each line is a criteria candidate
-   (direction, who it serves, what perfect looks like, sacrifices, risks).
-   A direct ask → state the story back in one sentence, get a yes. The
-   direction itself still fuzzy → brainstorm first.
+1. **Intake.** A brainstorm brief converts by role: direction and "what
+   perfect looks like" → criteria candidates; who it serves → context;
+   sacrifices → explicit non-goals; risks → edge probes or Deferred
+   questions. A direct ask → state the story back in one sentence, get a
+   yes. The direction itself still fuzzy → brainstorm first.
 2. **Ground.** Fetch the official docs per AGENTS.md Documentation for
    every capability the criteria will lean on. No source, no criterion —
    a bound you can't ground (latency, limits, platform behavior) is a
@@ -38,19 +39,21 @@ SPEC.md without approval, and approval freezes it.
    (C1, C2… — never renumbered), one observable behavior each, concrete
    values, edge cases beneath each criterion. Open questions go under
    "Deferred — open questions", never into criteria.
-5. **Self-review** with fresh eyes before presenting: placeholders left?
-   two readings possible anywhere? sections contradict? scope fit for one
-   plan, or needs decomposition? Fix inline.
+5. **Self-review** with fresh eyes — run the four checks under "Before
+   presenting" in `references/criteria-authoring.md`; fix inline.
 6. **Approve & freeze.** Present map + draft + open questions together.
-   Human approval freezes the words; verify alone ticks the boxes. Announce
-   the handoff: "→ plan", citing the criteria count.
+   Human approval freezes the words; commit the frozen spec (one commit).
+   Verify alone ticks the boxes. Announce the handoff: "→ plan", citing
+   the criteria count.
 
 ## After the freeze
 
 Changes are proposed as ADDED / MODIFIED / REMOVED criteria with exact
-wording; the human approves or edits; apply the approved text verbatim —
-one commit, no silent merges. Implementation contradicting the spec →
-stop, propose, wait.
+wording. You may draft and refine the proposal — validation is always
+human; no alteration lands in SPEC.md without it. Apply the validated
+text, one commit, no silent merges. REMOVED keeps its ID as a struck
+tombstone — IDs never vanish, so plan references never dangle silently.
+Implementation contradicting the spec → stop, propose, wait.
 
 ## Never
 

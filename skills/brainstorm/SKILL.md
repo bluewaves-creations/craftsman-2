@@ -41,9 +41,11 @@ independent subsystems → decompose first, brainstorm the first piece.
    feasibility proven? Recommend one and say why; name what you are
    deliberately not building. Done when the human picks.
 5. **Handoff** — direction brief, 5–10 lines: direction, who it serves,
-   what perfect looks like, sacrifices, risks — written so specify can turn
-   each line into acceptance criteria. Decision + rejected directions →
-   ADR.md (create it if inception hasn't yet).
+   what perfect looks like, sacrifices, risks. Specify converts by role:
+   direction and "perfect" shape criteria; who it serves is context;
+   sacrifices become non-goals; risks become edge probes or questions.
+   Decision + rejected directions → ADR.md (create it if inception
+   hasn't yet).
 
 ## Exits — announce the handoff
 

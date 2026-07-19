@@ -8,11 +8,12 @@ Copy the skeletons below when initializing a project.
 # Spec — {Project}
 
 Status: draft | approved {date}
-Frozen at approval. Only the human edits words; verify ticks boxes.
+Frozen at approval. The agent drafts and refines; every alteration needs
+human validation. Verify ticks the boxes.
 
 ## {Feature}
 - [ ] C1. {Actor} {action} → {observable outcome}{, bound if it matters}.
-      - Edge: {empty | duplicate | concurrent | unauthorized | too-big | offline}.
+      - Edge: {empty | duplicate | concurrent | unauthorized | too-big | malformed | offline | slow}.
 
 ## Deferred — open questions
 - {question} — blocks {what}

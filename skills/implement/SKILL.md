@@ -17,7 +17,7 @@ One task at a time, test first, docs open.
    suite where the code revealed a seam worth pinning.
 5. **Commit** — one task, one commit:
 ```
-feat(search): rank results by relevance [criterion 3]
+feat(search): rank results by relevance [C3]
 
 Postgres ts_rank over title+bio. Empty query short-circuits
 to recents per spec edge case.
