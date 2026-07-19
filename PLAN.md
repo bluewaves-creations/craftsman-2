@@ -110,9 +110,8 @@ Runs in ~/Developer/craftsman-pilot (empty, confirmed).
 Then → finish: every criterion ticked, full QA, delivery.
 
 ## Gaps
-- check.sh caps the template at 120 (reference budget) but nothing
-  mechanically holds it ≤100 as a *rendered constitution* (C1) — caught
-  by hand in verify 16.1 at 110 lines; a check.sh line would pin it.
+- ~~check.sh doesn't pin the template ≤100 as rendered constitution~~ —
+  closed by 17b.1 (red→green proven at 104 lines).
 - Template's merged "Lint / Types" gate slot trades a granularity cue
   for the ≤100 budget — accepted (review 16 minor): greenfield.md's
   gate table carries the multi-command rows an init actually writes.

@@ -53,6 +53,9 @@ diff is applied and committed.
 
 ## Never
 - Let an inferred claim into AGENTS.md.
+- Commit an AGENTS.md over 100 lines — `wc -l AGENTS.md` before every
+  constitution commit; golf it, don't waive it (the pilot shipped 161
+  silently — the budget is the always-on token bound).
 - Declare a gate you haven't run on this machine.
 - Finish greenfield or brownfield without the red→green proof and a first
   commit.
