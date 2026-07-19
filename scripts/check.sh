@@ -10,6 +10,9 @@ err() { echo "FAIL: $1"; fail=1; }
 agents_lines=$(wc -l < AGENTS.md | tr -d ' ')
 [ "$agents_lines" -le 100 ] || err "AGENTS.md is $agents_lines lines (budget 100)"
 
+[ -f LICENSE ] && head -1 LICENSE | grep -q '^MIT License$' \
+  || err "LICENSE missing or not MIT (C14)"
+
 for dir in skills/*/; do
   s="${dir}SKILL.md"
   [ -f "$s" ] || { err "$dir missing SKILL.md"; continue; }
@@ -18,6 +21,7 @@ for dir in skills/*/; do
   head -1 "$s" | grep -q '^---$' || err "$s missing frontmatter"
   base=$(basename "${dir%/}")
   grep -q "^name: $base\$" "$s" || err "$s frontmatter name must be '$base' (match directory)"
+  grep -q '^license: MIT$' "$s" || err "$s license must be MIT (match LICENSE, C14)"
   [ "$(grep -c '^---$' "$s")" -ge 2 ] || err "$s frontmatter is not closed"
   desc=$(awk '/^---$/{c++; next} c==1' "$s" \
     | awk '/^description:/{d=1; print; next} /^[a-zA-Z-]+:/{d=0} d')

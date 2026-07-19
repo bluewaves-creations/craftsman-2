@@ -17,6 +17,8 @@ jobs:
         run: scripts/check.sh
       - name: Open-spec validator (explicit — fails loud even if uvx vanishes from check.sh's path)
         run: |
+          ok=0
           for d in skills/*/; do
-            uvx --from skills-ref agentskills validate "$d"
+            uvx --from skills-ref agentskills validate "$d" || ok=1
           done
+          exit $ok
