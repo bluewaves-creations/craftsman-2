@@ -66,13 +66,14 @@ ADR.md, `git log -5` — then route by state.
 
 Standing contract: spec frozen at approval — the agent drafts and refines,
 validation is always mine, no spec alteration without it (verify ticks
-boxes) · plan adapts each batch, 2–4 tasks per batch · three failed
-attempts → stop, ADR.md, ask me · extended review on demand, advisory only.
+boxes) · plan adapts each batch, 2–4 tasks per batch · attempt budget
+spent (3 default; verify classifies) → stop, ADR.md, ask me · extended
+review on demand, advisory only.
 
 ## Ledgers
 | Artifact | Records | Written by |
 |---|---|---|
 | SPEC.md | what must be true | agent drafts, I validate; verify ticks boxes |
-| PLAN.md | path, batches, gaps | plan/review; verify ticks tasks |
+| PLAN.md | path, batches, gaps | plan/review; implement+verify log gaps; verify ticks |
 | ADR.md | decisions and dead ends | any skill, append-only |
 | git log | implementation narrative | implement per task; plan per boundary |

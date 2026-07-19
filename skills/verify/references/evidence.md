@@ -27,21 +27,18 @@ against the bug too:
 
 Two minutes, and the test is now evidence instead of decoration.
 
-## Failure classes and budgets
+## Classifying a red gate
 
-Classify before fixing — the class sets the budget and the stance:
+- **New-code failure** — the failing assertion exercises code this task
+  added or changed.
+- **Regression** — a previously green test broke. Suspect interference:
+  shared state, a changed interface, a widened type. A regression traded
+  away silently is the worst outcome.
+- **Environment / tooling** — the gate can't run at all: missing tool,
+  network, flaky infra. Never papered over with a skip.
 
-- **New-code failure** (the code this task added): 3 attempts, root-cause
-  discipline from implement.
-- **Regression** (a previously green test broke): 2 attempts — the old
-  behavior wins; protect it first, even at the cost of this task's
-  approach. A regression traded away silently is the worst outcome.
-- **Environment / tooling** (gate can't run, missing tool, flaky infra):
-  1 attempt, then report — never paper over with a skip.
-
-Budget spent → stop; attempts and best hypothesis to ADR.md; the human
-decides. Fixes amend the task's feat commit — the ledger shows one task,
-not a fix trail.
+Budgets and the stop protocol live in the skill. Re-prove a regression
+test *before* any amend — stash reverts only working-tree changes.
 
 ## Gap-pass questions
 

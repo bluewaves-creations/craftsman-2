@@ -43,12 +43,13 @@ Green means exit 0, evidence pasted.
 This repo is its own product — edits route through the same state table as
 any project (see skills/craftsman-mode/references/AGENTS.template.md).
 Announce the active skill. Batches of 2–4 tasks · verify each task ·
-review each batch · three failed attempts → stop, ADR.md, ask me.
+review each batch · attempt budget spent (3 default; verify classifies)
+→ stop, ADR.md, ask me.
 
 ## Ledgers
 | Artifact | Records | Written by |
 |---|---|---|
-| PLAN.md | batches, gaps | plan/review; verify ticks tasks |
+| PLAN.md | batches, gaps | plan/review; implement+verify log gaps; verify ticks |
 | ADR.md | decisions and dead ends | any skill, append-only |
 | git log | implementation narrative | implement per task; plan per boundary |
 
