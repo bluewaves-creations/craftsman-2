@@ -59,7 +59,7 @@ Announce the active skill ("→ implement, task 2.1"). Route by state:
 | Next task open in PLAN.md | implement |
 | Task code complete | verify |
 | Batch tasks all verified | review |
-| Every criterion ticked | finish |
+| Every criterion ticked, last batch reviewed | finish |
 
 Fresh session: read SPEC.md, PLAN.md (State section + current batch),
 ADR.md, `git log -5` — then route by state.
@@ -74,6 +74,6 @@ review on demand, advisory only.
 | Artifact | Records | Written by |
 |---|---|---|
 | SPEC.md | what must be true | agent drafts, I validate; verify ticks boxes |
-| PLAN.md | path, batches, gaps | plan/review; implement+verify log gaps; verify ticks |
-| ADR.md | decisions and dead ends | any skill, append-only |
+| PLAN.md | path, batches, gaps | plan/review; implement+verify log gaps; verify ticks; finish closes |
+| ADR.md | decisions and dead ends | any skill appends; finish consolidates, human-gated |
 | git log | implementation narrative | implement per task; plan per boundary; verify/review fixes |

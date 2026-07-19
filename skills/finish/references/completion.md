@@ -46,7 +46,7 @@ disposition.
 | Push + PR | push branch, open PR | keep branch |
 | Tag a release | tag + notes per project habit | keep |
 | Keep as-is | nothing; work stays on branch | none |
-| Discard | delete the work | typed "discard" required, twice never asked |
+| Discard | delete the work | the human types "discard" once; never re-prompted |
 
 Present all that apply; the human picks. Never merge, push, tag, or
 delete on your own initiative.
@@ -56,8 +56,8 @@ delete on your own initiative.
 ```
 Shipped: {one line} — criteria C1–C12 green (evidence above).
 Gates: test · lint · types · build — all exit 0, full scope.
-Deferred: C9 perf bound relaxed (ADR 2026-07-19), offline mode (Gap,
-accepted).
+Deferred: offline mode (Gap, accepted: single-venue usage); perf
+hardening past 50k records (ADR 2026-07-19).
 Consolidated: 3 ADR merges approved; 1 superseded.
 Docs: README quickstart re-run clean; AGENTS.md corrected (gate command).
 Suggested next spec: {the natural follow-on, one line}.

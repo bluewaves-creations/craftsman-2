@@ -18,10 +18,10 @@ Finishing is not stopping — it is the pass that turns a working batch
 series into a finished piece of work. Nothing new gets built here;
 everything built gets proven, consolidated, documented, delivered.
 
-**Preflight guard**: any criterion unticked, batch unreviewed, or boundary
-unclosed → this is not finish; name what's open and route back. Every
-"Deferred — open questions" entry in SPEC.md: resolved, or explicitly
-carried by the human.
+**Preflight guard**: any criterion unticked, batch unreviewed, or no
+boundary commit since the last review → not finish; name what's open,
+route back. Every "Deferred — open questions" entry in SPEC.md: resolved
+via specify's post-freeze delta, or explicitly carried by the human.
 
 ## Method
 
@@ -29,12 +29,11 @@ carried by the human.
    fix now (implement → verify loop), defer (ADR.md entry with the
    reason), or the human accepts it as-is.
 2. **Full QA** — every gate, full scope, fresh, on the final tree —
-   verify's evidence rules apply. Walk SPEC.md: each C-id's demonstration
-   re-confirmed. Red → bounded loop, 3 rounds per gate, then stop and
-   report.
+   verify's evidence rules and per-failure budgets apply. Walk SPEC.md:
+   each C-id's demonstration re-confirmed. Budget spent → stop, report.
 3. **Improvement pass** — offer an extended review (advisory). Accepted
-   findings become one final improvement batch through the normal
-   implement → verify → review loop.
+   findings become one final improvement batch (plan adds it), returning
+   here through the normal implement → verify → review → plan loop.
 4. **Consolidate ADR.md** — propose merges of related entries, compress
    tried-and-failed history to terse lines — never delete it. Stale
    detection: a decision the code has moved past → "confirm or

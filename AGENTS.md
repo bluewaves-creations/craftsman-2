@@ -49,8 +49,8 @@ review each batch · attempt budget spent (3 default; verify classifies)
 ## Ledgers
 | Artifact | Records | Written by |
 |---|---|---|
-| PLAN.md | batches, gaps | plan/review; implement+verify log gaps; verify ticks |
-| ADR.md | decisions and dead ends | any skill, append-only |
+| PLAN.md | batches, gaps | plan/review; implement+verify log gaps; verify ticks; finish closes |
+| ADR.md | decisions and dead ends | any skill appends; finish consolidates, human-gated |
 | git log | implementation narrative | implement per task; plan per boundary; verify/review fixes |
 
 No SPEC.md yet — goals live in README until the flow stabilizes.
