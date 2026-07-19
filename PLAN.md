@@ -176,7 +176,7 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
 - [x] 11.3 Report + proposed improvement batches (below, awaiting human
       approval — extended review changes no code).
 
-## Batch 12 (PROPOSED — correctness, no design decisions) — awaiting approval
+## Batch 12 — correctness (approved)
 - 12.1 Plan gains a fourth mode, "Mid-flight intake": seats spec deltas,
       architecture-blocked, stale-plan, execution-fog handoffs; specify's
       After-the-freeze gains its missing exit hop "→ plan (mid-flight)".
@@ -199,7 +199,7 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       complete (specify/finish/init commits); PLAN goals citation fixed;
       frontmatter versions unified.
 
-## Batch 13 (PROPOSED — Apple / Xcode 27 composition) — awaiting approval
+## Batch 13 — Apple / Xcode 27 composition (approved)
 - 13.1 craftsman-mode: Apple-project probe — export Apple's skills
       (xcrun agent skills export), register Xcode MCP / Apple docs as
       Documentation source, record the delegation in AGENTS.md.
@@ -210,16 +210,19 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
       example refreshed (Approachable Concurrency, @Observable, Swift
       Testing).
 
-## Open design questions (human decision needed before any batch 14)
-- Never-override posture: recommended — the human may waive any Never
-  explicitly; the waiver is recorded in ADR.md (sovereignty with a
-  ledger, never silent).
-- Remote verdicts: recommended — AGENTS.md Gates may name CI as the
-  authoritative environment; CI red blocks finish even when local green.
-- Multi-feature delivery: recommended — finish preflight scoped to a
-  feature's C-id range when the human names one.
-- Speed relief: allow self-review form for single-task batches?
-- Maintenance lane (dep bumps, CVE patches): route and ceremony?
+## Batch 14 — boundary policies (recommendations approved 2026-07-19)
+- 14.1 Never-waiver: the human may waive any Never explicitly; every
+      waiver recorded in ADR.md — sovereignty with a ledger, never
+      silent. Standing-contract clause + ADR entry.
+- 14.2 Remote verdicts: AGENTS.md Gates may name CI as the authoritative
+      environment; when named, CI red blocks finish even on local green.
+- 14.3 Feature-scoped finish: the human may scope finish to a feature's
+      C-id range; preflight, QA walk, and delivery apply to that range.
+- 14.4 Speed relief: a single-task batch may use review's self-review
+      form — checklist and improvement loop unchanged.
+- 14.5 Maintenance lane: dep/toolchain/CVE updates route to plan as an
+      improvement batch (Flow row); an actively exploited vulnerability
+      is a defect → fix.
 
 ## Later batches (draft)
 - One batch per remaining skill: brainstorm, specify, plan, implement,
