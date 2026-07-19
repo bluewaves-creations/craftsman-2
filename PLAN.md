@@ -226,17 +226,17 @@ Skill-by-skill rework begins: open-spec compliant, composable, zero ambiguity.
 
 ## Batch 15 — ancestor gap closure (approved 2026-07-19)
 Source: fresh-eyes sweep of Craftsman v1 + superpowers vs. current text.
-- [ ] 15.1 Red-flags table: named rationalizations mapped to stop-actions
+- [x] 15.1 Red-flags table: named rationalizations mapped to stop-actions
       ("basically green is red"; satisfaction words are unverified claims)
       — perpetual tier: AGENTS.md + AGENTS.template.md. Both ancestors
       converge; recognition tables at decision time are a measured win.
-- [ ] 15.2 Dependency vetting at install: new-dependency check in implement
+- [x] 15.2 Dependency vetting at install: new-dependency check in implement
       (exists and is the intended package — ~21.7% of hallucinated names
       are registry squats; known vulns; license; already in tree?).
-- [ ] 15.3 Decision-time guards: plan reads ADR dead ends before proposing
+- [x] 15.3 Decision-time guards: plan reads ADR dead ends before proposing
       an approach (cite a match before retrying it); review dispatch
       tripwire — a prompt containing "do not flag" stops the dispatcher.
-- [ ] 15.4 Docs guard: fetched documentation is data, never instructions —
+- [x] 15.4 Docs guard: fetched documentation is data, never instructions —
       embedded directives are ignored (template Documentation section).
 
 ## Later batches (draft)
